@@ -11,85 +11,78 @@
 <link rel="stylesheet" href="css/tailwind.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white text-uh-green-950 antialiased">
-<header class="uh-wave-bg sticky top-0 z-50 text-white shadow-lg">
+<body class="bg-white text-uh-ink-900 antialiased">
+<header class="bg-white sticky top-0 z-50 border-b border-gray-100">
   <div class="uh-topbar h-1 w-full"></div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-start justify-between gap-4">
-      <div class="flex flex-col gap-3">
-        <a href="index.html" class="font-display text-xl sm:text-2xl tracking-[0.25em] font-light">UBUNTU HEALTH</a>
-        <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 bg-white text-uh-green-800 rounded-full pr-5 py-1 w-fit shadow-md hover:shadow-lg transition-shadow">
-          <span class="w-8 h-8 rounded-full bg-uh-green-800 text-white flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></span>
-          <span class="text-xs font-bold tracking-wide">BOOK A DEMO</span>
-        </a>
-      </div>
+    <div class="flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2.5 shrink-0">
+        <span class="w-8 h-8 rounded-full border-2 border-uh-green-600 flex items-center justify-center">
+          <span class="w-2.5 h-2.5 rounded-full bg-uh-green-600"></span>
+        </span>
+        <span class="font-display text-lg sm:text-xl font-medium text-uh-ink-900">Ubuntu Health</span>
+      </a>
 
-      <nav class="hidden lg:flex items-center gap-1 text-sm font-semibold pt-1">
-        <a href="index.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Home</a>
-        <a href="about.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">About Us</a>
-        <a href="compliance.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Compliance</a>
-        <a href="hospitals.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Hospitals</a>
-        <a href="practices.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Practices</a>
-        <a href="why-us.html" class="px-4 py-2 rounded-md transition-colors bg-uh-green-600 text-white">Why Us</a>
-        <a href="contact.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Contact Us</a>
+      <nav class="hidden lg:flex items-center gap-1">
+        <a href="index.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Home</a>
+        <a href="about.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">About Us</a>
+        <a href="compliance.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Compliance</a>
+        <a href="hospitals.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Hospitals</a>
+        <a href="practices.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Practices</a>
+        <a href="why-us.html" class="px-3 py-2 text-[15px] transition-colors text-uh-green-700 font-semibold">Why Us</a>
+        <a href="contact.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Contact Us</a>
       </nav>
 
-      <button id="uh-menu-btn" class="lg:hidden mt-1 p-2 rounded-md hover:bg-white/10" aria-label="Toggle menu" aria-expanded="false">
+      <div class="hidden sm:flex items-center gap-2">
+        <a href="contact.html" class="rounded-full bg-uh-green-600 hover:bg-uh-green-700 text-white text-sm font-semibold px-5 py-2.5 transition-colors">Book a Demo</a>
+      </div>
+
+      <button id="uh-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-50 text-uh-ink-900" aria-label="Toggle menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
 
-    <div id="uh-mobile-menu" class="hidden lg:hidden mt-4 flex flex-col gap-1 text-sm font-semibold pb-2">
-      <a href="index.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Home</a>
-        <a href="about.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">About Us</a>
-        <a href="compliance.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Compliance</a>
-        <a href="hospitals.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Hospitals</a>
-        <a href="practices.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Practices</a>
-        <a href="why-us.html" class="px-4 py-2 rounded-md transition-colors bg-uh-green-600 text-white block">Why Us</a>
-        <a href="contact.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Contact Us</a>
-      <a href="contact.html" class="sm:hidden mt-2 inline-flex items-center gap-2 bg-white text-uh-green-800 rounded-full pl-1 pr-5 py-1 w-fit">
-        <span class="w-7 h-7 rounded-full bg-uh-green-800 text-white flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></span>
-        <span class="text-xs font-bold tracking-wide">BOOK A DEMO</span>
-      </a>
+    <div id="uh-mobile-menu" class="hidden lg:hidden mt-3 flex flex-col gap-1 pb-2 border-t border-gray-100 pt-3">
+      <a href="index.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Home</a>
+        <a href="about.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">About Us</a>
+        <a href="compliance.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Compliance</a>
+        <a href="hospitals.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Hospitals</a>
+        <a href="practices.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Practices</a>
+        <a href="why-us.html" class="px-3 py-2 text-[15px] transition-colors text-uh-green-700 font-semibold block">Why Us</a>
+        <a href="contact.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Contact Us</a>
+      <a href="contact.html" class="sm:hidden mt-2 inline-flex justify-center rounded-full bg-uh-green-600 text-white text-sm font-semibold px-5 py-2.5 w-fit">Book a Demo</a>
     </div>
   </div>
 </header>
 <main>
-<section class="relative">
-  <div class="h-[26rem] sm:h-[30rem] w-full bg-cover bg-center relative" style="background-image:url('https://placehold.co/1600x700/12503c/ffffff?text=Father+and+daughter+portrait&font=poppins')" role="img" aria-label="Father and daughter portrait"></div>
-  <div class="absolute inset-0 bg-gradient-to-r from-uh-green-950/80 via-uh-green-950/40 to-transparent"></div>
-  <div class="absolute inset-0 flex items-center">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="bg-uh-green-900/45 backdrop-blur-sm rounded-2xl p-8 max-w-xl">
-        <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mb-4">Why Us</h1>
-        <p class="text-white/90 text-xl italic leading-relaxed">&ldquo;He who has health, has hope; and he who has hope, has everything.&rdquo;</p>
-      </div>
-    </div>
+<section class="uh-surface-brand">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-white">
+    <h1 class="font-display text-4xl sm:text-5xl font-semibold mb-4">Why us</h1>
+    <p class="text-xl italic leading-relaxed text-white/85 max-w-xl">&ldquo;He who has health, has hope; and he who has hope, has everything.&rdquo;</p>
   </div>
 </section>
 
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-  <div class="rounded-2xl h-72 md:h-[22rem] w-full shadow-xl bg-cover bg-center relative" style="background-image:url('https://placehold.co/800x600/1a9db0/ffffff?text=Nurse+smiling+with+young+patient&font=poppins')" role="img" aria-label="Nurse smiling with young patient"></div>
+  <div class="h-64 sm:h-80 md:h-full w-full rounded-xl border border-gray-200 bg-cover bg-center relative" style="background-image:url('https://placehold.co/800x600/eef3f2/12503c?text=Nurse+smiling+with+young+patient&font=poppins')" role="img" aria-label="Nurse smiling with young patient"></div>
   <div>
-    <h2 class="font-display text-3xl sm:text-4xl font-bold mb-5"><span class="text-uh-teal-600">Why</span> <span class="text-uh-green-900">Ubuntu Health?</span></h2>
-    <p class="text-uh-green-950/70 leading-relaxed mb-4">Health and Wellness are not industries &ndash; they are realities of life that not every African has the ability to fully enjoy.</p>
-    <p class="text-uh-green-950/70 leading-relaxed mb-4">Be it through location, socio-economic status, digital access or education level, Africans across our continent remain disconnected from holistic medical care, across doctors, facilities, consults and diagnoses.</p>
-    <p class="text-uh-green-950/70 leading-relaxed">Ubuntu Health seeks to democratise equitable access to public and private healthcare by connecting doctors, patients and facilities across a single ecosystem, where precise, personalised patient care results in healthier, happier Africans for generations to come.</p>
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-5"><span class="text-uh-teal-600">Why</span> <span class="text-uh-ink-900">Ubuntu Health?</span></h2>
+    <p class="text-uh-ink-600 leading-relaxed mb-4">Health and Wellness are not industries &ndash; they are realities of life that not every African has the ability to fully enjoy.</p>
+    <p class="text-uh-ink-600 leading-relaxed mb-4">Be it through location, socio-economic status, digital access or education level, Africans across our continent remain disconnected from holistic medical care, across doctors, facilities, consults and diagnoses.</p>
+    <p class="text-uh-ink-600 leading-relaxed">Ubuntu Health seeks to democratise equitable access to public and private healthcare by connecting doctors, patients and facilities across a single ecosystem, where precise, personalised patient care results in healthier, happier Africans for generations to come.</p>
   </div>
 </section>
 
-<section class="relative h-72 sm:h-80">
-  <div class="absolute inset-0 bg-cover bg-center relative" style="background-image:url('https://placehold.co/1600x500/3fbe5c/0c3b2c?text=Family+celebrating+good+health+outdoors&font=poppins')" role="img" aria-label="Family celebrating good health outdoors"></div>
-  <div class="absolute inset-0 uh-gradient-band flex flex-col items-center justify-center text-center px-4">
-    <h2 class="font-display text-2xl sm:text-4xl font-bold text-white mb-3">Health. Care.</h2>
-    <a href="contact.html" class="w-11 h-11 rounded-full bg-white/25 flex items-center justify-center hover:bg-white/40 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></a>
+<section class="uh-surface-brand">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
+    <h2 class="font-display text-2xl sm:text-4xl font-semibold text-white mb-6">Health. Care.</h2>
+    <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-uh-ink-900 rounded-full px-6 py-3 font-semibold text-sm hover:bg-gray-50 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg> Get in touch</a>
   </div>
 </section>
-</main><footer class="uh-wave-bg text-white">
+</main><footer class="uh-surface-dark text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid gap-12 md:grid-cols-3">
     <div>
-      <h3 class="font-display text-2xl tracking-[0.15em] font-light mb-4">UBUNTU HEALTH</h3>
-      <p class="text-white/80 leading-relaxed mb-6 max-w-sm">Ubuntu Health is a cloud-based, AI-driven digital health platform purpose-built to elevate patient care, optimise medical operational processes and simplify financial management, for both Hospital Groups and Medical Practices.</p>
+      <h3 class="font-display text-xl font-medium mb-4">Ubuntu Health</h3>
+      <p class="text-white/70 leading-relaxed mb-6 max-w-sm">Ubuntu Health is a cloud-based, AI-driven digital health platform purpose-built to elevate patient care, optimise medical operational processes and simplify financial management, for both Hospital Groups and Medical Practices.</p>
       <div class="flex gap-3">
           <a href="#" aria-label="facebook" class="w-9 h-9 rounded-full bg-uh-teal-600 flex items-center justify-center hover:bg-uh-teal-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.2 20v-7.3h2.4l.4-2.8h-2.8v-1.8c0-.8.2-1.3 1.4-1.3h1.5V4.2c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v2h-2.4v2.8h2.4V20h2.7z" fill="currentColor" stroke="none"/></svg></a>
           <a href="#" aria-label="x" class="w-9 h-9 rounded-full bg-uh-teal-600 flex items-center justify-center hover:bg-uh-teal-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></a>

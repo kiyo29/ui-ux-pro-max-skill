@@ -11,66 +11,62 @@
 <link rel="stylesheet" href="css/tailwind.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white text-uh-green-950 antialiased">
-<header class="uh-wave-bg sticky top-0 z-50 text-white shadow-lg">
+<body class="bg-white text-uh-ink-900 antialiased">
+<header class="bg-white sticky top-0 z-50 border-b border-gray-100">
   <div class="uh-topbar h-1 w-full"></div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-start justify-between gap-4">
-      <div class="flex flex-col gap-3">
-        <a href="index.html" class="font-display text-xl sm:text-2xl tracking-[0.25em] font-light">UBUNTU HEALTH</a>
-        <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 bg-white text-uh-green-800 rounded-full pr-5 py-1 w-fit shadow-md hover:shadow-lg transition-shadow">
-          <span class="w-8 h-8 rounded-full bg-uh-green-800 text-white flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></span>
-          <span class="text-xs font-bold tracking-wide">BOOK A DEMO</span>
-        </a>
-      </div>
+    <div class="flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2.5 shrink-0">
+        <span class="w-8 h-8 rounded-full border-2 border-uh-green-600 flex items-center justify-center">
+          <span class="w-2.5 h-2.5 rounded-full bg-uh-green-600"></span>
+        </span>
+        <span class="font-display text-lg sm:text-xl font-medium text-uh-ink-900">Ubuntu Health</span>
+      </a>
 
-      <nav class="hidden lg:flex items-center gap-1 text-sm font-semibold pt-1">
-        <a href="index.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Home</a>
-        <a href="about.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">About Us</a>
-        <a href="compliance.html" class="px-4 py-2 rounded-md transition-colors bg-uh-green-600 text-white">Compliance</a>
-        <a href="hospitals.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Hospitals</a>
-        <a href="practices.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Practices</a>
-        <a href="why-us.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Why Us</a>
-        <a href="contact.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Contact Us</a>
+      <nav class="hidden lg:flex items-center gap-1">
+        <a href="index.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Home</a>
+        <a href="about.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">About Us</a>
+        <a href="compliance.html" class="px-3 py-2 text-[15px] transition-colors text-uh-green-700 font-semibold">Compliance</a>
+        <a href="hospitals.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Hospitals</a>
+        <a href="practices.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Practices</a>
+        <a href="why-us.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Why Us</a>
+        <a href="contact.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Contact Us</a>
       </nav>
 
-      <button id="uh-menu-btn" class="lg:hidden mt-1 p-2 rounded-md hover:bg-white/10" aria-label="Toggle menu" aria-expanded="false">
+      <div class="hidden sm:flex items-center gap-2">
+        <a href="contact.html" class="rounded-full bg-uh-green-600 hover:bg-uh-green-700 text-white text-sm font-semibold px-5 py-2.5 transition-colors">Book a Demo</a>
+      </div>
+
+      <button id="uh-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-50 text-uh-ink-900" aria-label="Toggle menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
 
-    <div id="uh-mobile-menu" class="hidden lg:hidden mt-4 flex flex-col gap-1 text-sm font-semibold pb-2">
-      <a href="index.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Home</a>
-        <a href="about.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">About Us</a>
-        <a href="compliance.html" class="px-4 py-2 rounded-md transition-colors bg-uh-green-600 text-white block">Compliance</a>
-        <a href="hospitals.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Hospitals</a>
-        <a href="practices.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Practices</a>
-        <a href="why-us.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Why Us</a>
-        <a href="contact.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Contact Us</a>
-      <a href="contact.html" class="sm:hidden mt-2 inline-flex items-center gap-2 bg-white text-uh-green-800 rounded-full pl-1 pr-5 py-1 w-fit">
-        <span class="w-7 h-7 rounded-full bg-uh-green-800 text-white flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></span>
-        <span class="text-xs font-bold tracking-wide">BOOK A DEMO</span>
-      </a>
+    <div id="uh-mobile-menu" class="hidden lg:hidden mt-3 flex flex-col gap-1 pb-2 border-t border-gray-100 pt-3">
+      <a href="index.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Home</a>
+        <a href="about.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">About Us</a>
+        <a href="compliance.html" class="px-3 py-2 text-[15px] transition-colors text-uh-green-700 font-semibold block">Compliance</a>
+        <a href="hospitals.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Hospitals</a>
+        <a href="practices.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Practices</a>
+        <a href="why-us.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Why Us</a>
+        <a href="contact.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Contact Us</a>
+      <a href="contact.html" class="sm:hidden mt-2 inline-flex justify-center rounded-full bg-uh-green-600 text-white text-sm font-semibold px-5 py-2.5 w-fit">Book a Demo</a>
     </div>
   </div>
 </header>
 <main>
-<section class="relative">
-  <div class="h-64 sm:h-72 w-full bg-cover bg-center relative" style="background-image:url('https://placehold.co/1600x420/08251c/ffffff?text=Compliance+and+data+security&font=poppins')" role="img" aria-label="Compliance and data security"></div>
-  <div class="absolute inset-0 uh-wave-bg opacity-90"></div>
-  <div class="absolute inset-0 flex flex-col justify-center">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="hidden sm:flex gap-4 mb-8">
-        <div class="w-14 h-14 rounded-full bg-white/15 border border-white/30 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12.3l2 2 4-4.5"/></svg></div>
-      <div class="w-14 h-14 rounded-full bg-white/15 border border-white/30 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.5M12 18.5V21M21 12h-2.5M5.5 12H3M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8M18.4 18.4l-1.8-1.8M7.4 7.4L5.6 5.6"/></svg></div>
-      <div class="w-14 h-14 rounded-full bg-white/15 border border-white/30 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8l8.5-4 8.5 4-8.5 4-8.5-4z"/><path d="M3.5 8v8l8.5 4 8.5-4V8"/><path d="M12 12v8"/></svg></div>
-      <div class="w-14 h-14 rounded-full bg-white/15 border border-white/30 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></div>
-      <div class="w-14 h-14 rounded-full bg-white/15 border border-white/30 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 109 9h-9V3z"/><path d="M14.5 3.7A9 9 0 0120.3 9.5H14.5V3.7z" opacity="0.5"/></svg></div>
-      <div class="w-14 h-14 rounded-full bg-white/15 border border-white/30 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="1.5"/><rect x="9" y="2.3" width="6" height="3" rx="1"/><path d="M9 11h6M9 14.5h6M9 17.5h4"/></svg></div>
-      </div>
-      <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mb-3">Compliance</h1>
-      <p class="text-white/80 max-w-xl">Security, privacy and regulatory information for the Ubuntu Health platform.</p>
+<section class="uh-surface-brand">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+    <div class="hidden sm:flex gap-4 mb-8">
+      <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12.3l2 2 4-4.5"/></svg></div>
+      <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.5M12 18.5V21M21 12h-2.5M5.5 12H3M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8M18.4 18.4l-1.8-1.8M7.4 7.4L5.6 5.6"/></svg></div>
+      <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8l8.5-4 8.5 4-8.5 4-8.5-4z"/><path d="M3.5 8v8l8.5 4 8.5-4V8"/><path d="M12 12v8"/></svg></div>
+      <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></div>
+      <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 109 9h-9V3z"/><path d="M14.5 3.7A9 9 0 0120.3 9.5H14.5V3.7z" opacity="0.5"/></svg></div>
+      <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="1.5"/><rect x="9" y="2.3" width="6" height="3" rx="1"/><path d="M9 11h6M9 14.5h6M9 17.5h4"/></svg></div>
     </div>
+    <h1 class="font-display text-4xl sm:text-5xl font-semibold text-white mb-3">Compliance</h1>
+    <p class="text-white/80 max-w-xl">Security, privacy and regulatory information for the Ubuntu Health platform.</p>
   </div>
 </section>
 
@@ -96,38 +92,38 @@
     </nav></aside>
   <div>
     <section id="overview" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Overview</h3>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Overview</h3>
       
-      <p class="text-uh-green-950/70 leading-relaxed mb-8 max-w-3xl">Ubuntu Health provides healthcare software used by clinicians and patients to manage appointments, consultation notes, prescriptions, referrals, symptom tracking and medication histories. Separate apps for doctors and patients. Production data hosted in South Africa.</p>
+      <p class="text-uh-ink-600 leading-relaxed mb-8 max-w-3xl">Ubuntu Health provides healthcare software used by clinicians and patients to manage appointments, consultation notes, prescriptions, referrals, symptom tracking and medication histories. Separate apps for doctors and patients. Production data hosted in South Africa.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         
-      <div class="rounded-2xl border border-uh-green-100 p-6">
-        <span class="inline-block uh-gradient-icon text-white text-xs font-bold px-4 py-1.5 rounded-full mb-4">Operational</span>
-        <h4 class="font-display font-bold text-uh-green-900 mb-2">Service Status</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">Core services are available; maintenance is communicated in-app.</p>
+      <div class="rounded-2xl border border-gray-200 p-6">
+        <span class="inline-block bg-uh-green-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-4">Operational</span>
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-2">Service Status</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">Core services are available; maintenance is communicated in-app.</p>
       </div>
         
-      <div class="rounded-2xl border border-uh-green-100 p-6">
-        <span class="inline-block uh-gradient-icon text-white text-xs font-bold px-4 py-1.5 rounded-full mb-4">South Africa</span>
-        <h4 class="font-display font-bold text-uh-green-900 mb-2">Data Location</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">Currently hosted in SA; cross-border transfers would follow POPIA s72 safeguards.</p>
+      <div class="rounded-2xl border border-gray-200 p-6">
+        <span class="inline-block bg-uh-green-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-4">South Africa</span>
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-2">Data Location</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">Currently hosted in SA; cross-border transfers would follow POPIA s72 safeguards.</p>
       </div>
         
-      <div class="rounded-2xl border border-uh-green-100 p-6">
-        <span class="inline-block uh-gradient-icon text-white text-xs font-bold px-4 py-1.5 rounded-full mb-4">Doctors &bull; Patients</span>
-        <h4 class="font-display font-bold text-uh-green-900 mb-2">Separate Apps</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">Role-based access and audit trails across both apps.</p>
+      <div class="rounded-2xl border border-gray-200 p-6">
+        <span class="inline-block bg-uh-green-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-4">Doctors &bull; Patients</span>
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-2">Separate Apps</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">Role-based access and audit trails across both apps.</p>
       </div>
       </div>
     </section>
     <section id="controls-summary" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Controls summary</h3>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Controls summary</h3>
       
       <div class="grid sm:grid-cols-2 gap-6">
         
-      <div class="rounded-2xl border border-uh-green-100 p-6">
-        <h4 class="font-display font-bold text-uh-green-800 mb-3">Infrastructure security</h4>
-        <ul class="text-sm text-uh-green-950/70 space-y-2 list-disc list-inside">
+      <div class="rounded-2xl border border-gray-200 p-6">
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-3">Infrastructure security</h4>
+        <ul class="text-sm text-uh-ink-600 space-y-2 list-disc list-inside">
           <li>TLS in transit; modern AES-class at rest; key rotation.</li>
           <li>Segmentation, firewalls, hardened baselines, patching cadence.</li>
           <li>Centralised logging &amp; monitoring; access reviews.</li>
@@ -135,45 +131,45 @@
         </ul>
       </div>
         
-      <div class="rounded-2xl border border-uh-green-100 p-6">
-        <h4 class="font-display font-bold text-uh-green-800 mb-3">Organisational security</h4>
-        <ul class="text-sm text-uh-green-950/70 space-y-2 list-disc list-inside">
+      <div class="rounded-2xl border border-gray-200 p-6">
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-3">Organisational security</h4>
+        <ul class="text-sm text-uh-ink-600 space-y-2 list-disc list-inside">
           <li>Information Security Policy; privacy training.</li>
           <li>MFA, onboarding/offboarding, periodic access reviews.</li>
           <li>Vendor due-diligence; POPIA-compliant Data Processing Agreements.</li>
         </ul>
       </div>
         
-      <div class="rounded-2xl border border-uh-green-100 p-6">
-        <h4 class="font-display font-bold text-uh-green-800 mb-3">Product security</h4>
-        <ul class="text-sm text-uh-green-950/70 space-y-2 list-disc list-inside">
+      <div class="rounded-2xl border border-gray-200 p-6">
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-3">Product security</h4>
+        <ul class="text-sm text-uh-ink-600 space-y-2 list-disc list-inside">
           <li>Secure SDLC; code reviews; SAST/DAST.</li>
           <li>RBAC and audit trails for clinical records.</li>
           <li>Privacy by design (data minimisation, secure defaults).</li>
         </ul>
       </div>
         
-      <div class="rounded-2xl border border-uh-green-100 p-6">
-        <h4 class="font-display font-bold text-uh-green-800 mb-3">Internal procedures</h4>
-        <ul class="text-sm text-uh-green-950/70 space-y-2 list-disc list-inside">
+      <div class="rounded-2xl border border-gray-200 p-6">
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-3">Internal procedures</h4>
+        <ul class="text-sm text-uh-ink-600 space-y-2 list-disc list-inside">
           <li>Change management; peer review; staged deployments.</li>
           <li>Endpoint baselines; device encryption; patch policies.</li>
           <li>Incident response: Detect &rarr; Contain &rarr; Assess &rarr; Notify &rarr; Remediate &rarr; Review.</li>
         </ul>
       </div>
         
-      <div class="rounded-2xl border border-uh-green-100 p-6">
-        <h4 class="font-display font-bold text-uh-green-800 mb-3">Data &amp; privacy</h4>
-        <ul class="text-sm text-uh-green-950/70 space-y-2 list-disc list-inside">
+      <div class="rounded-2xl border border-gray-200 p-6">
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-3">Data &amp; privacy</h4>
+        <ul class="text-sm text-uh-ink-600 space-y-2 list-disc list-inside">
           <li>POPIA-compliant Privacy Notice; just-in-time app notices.</li>
           <li>Disclosure registers; operator contracts; data inventory.</li>
           <li>Storage in SA; s72 safeguards for any cross-border transfers.</li>
         </ul>
       </div>
         
-      <div class="rounded-2xl border border-uh-green-100 p-6">
-        <h4 class="font-display font-bold text-uh-green-800 mb-3">Business continuity</h4>
-        <ul class="text-sm text-uh-green-950/70 space-y-2 list-disc list-inside">
+      <div class="rounded-2xl border border-gray-200 p-6">
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-3">Business continuity</h4>
+        <ul class="text-sm text-uh-ink-600 space-y-2 list-disc list-inside">
           <li>Business Continuity &amp; Disaster Recovery plans established.</li>
           <li>Restoration testing performed on a regular schedule.</li>
         </ul>
@@ -181,178 +177,178 @@
       </div>
     </section>
     <section id="compliance-frameworks" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Compliance frameworks</h3>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Compliance frameworks</h3>
       
       <div class="flex flex-col gap-5 max-w-4xl">
         
-      <div class="rounded-xl border-2 border-uh-green-500/60 p-6">
-        <h4 class="font-display font-bold text-uh-green-700 mb-2">POPIA</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">Lawful processing of personal &amp; special personal information; security safeguards; operator duties; data subject rights; breach notifications.</p>
+      <div class="rounded-xl border border-gray-200 p-6">
+        <h4 class="font-display font-semibold text-uh-green-700 mb-2">POPIA</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">Lawful processing of personal &amp; special personal information; security safeguards; operator duties; data subject rights; breach notifications.</p>
       </div>
         
-      <div class="rounded-xl border-2 border-uh-green-500/60 p-6">
-        <h4 class="font-display font-bold text-uh-green-700 mb-2">HPCSA Ethics</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">Booklet 9 (patient records) &amp; Booklet 10 (telehealth): documentation, retention, consent, confidentiality.</p>
+      <div class="rounded-xl border border-gray-200 p-6">
+        <h4 class="font-display font-semibold text-uh-green-700 mb-2">HPCSA Ethics</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">Booklet 9 (patient records) &amp; Booklet 10 (telehealth): documentation, retention, consent, confidentiality.</p>
       </div>
         
-      <div class="rounded-xl border-2 border-uh-green-500/60 p-6">
-        <h4 class="font-display font-bold text-uh-green-700 mb-2">NHA</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">National Health Act: confidentiality, informed consent, duty to create &amp; maintain health records.</p>
+      <div class="rounded-xl border border-gray-200 p-6">
+        <h4 class="font-display font-semibold text-uh-green-700 mb-2">NHA</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">National Health Act: confidentiality, informed consent, duty to create &amp; maintain health records.</p>
       </div>
         
-      <div class="rounded-xl border-2 border-uh-green-500/60 p-6">
-        <h4 class="font-display font-bold text-uh-green-700 mb-2">ECTA</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">Electronic signatures &amp; data messages; admissibility; retention in electronic form.</p>
+      <div class="rounded-xl border border-gray-200 p-6">
+        <h4 class="font-display font-semibold text-uh-green-700 mb-2">ECTA</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">Electronic signatures &amp; data messages; admissibility; retention in electronic form.</p>
       </div>
         
-      <div class="rounded-xl border-2 border-uh-green-500/60 p-6">
-        <h4 class="font-display font-bold text-uh-green-700 mb-2">PAIA</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">Section 51 private body manual; access requests; POPIA-aligned refusal grounds.</p>
+      <div class="rounded-xl border border-gray-200 p-6">
+        <h4 class="font-display font-semibold text-uh-green-700 mb-2">PAIA</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">Section 51 private body manual; access requests; POPIA-aligned refusal grounds.</p>
       </div>
       </div>
     </section>
     <section id="policies-documents" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Policies & Documents</h3>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Policies & Documents</h3>
       
       <div class="grid sm:grid-cols-2 gap-6">
         
-      <a href="#privacy-notice" class="block rounded-2xl border border-uh-green-100 p-6 hover:border-uh-green-500 hover:shadow-md transition">
-        <h4 class="font-display font-bold text-uh-green-800 mb-2">Privacy Notice (POPIA)</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">Transparency, lawful bases, rights, operators, breach notices.</p>
+      <a href="#privacy-notice" class="block rounded-2xl border border-gray-200 p-6 hover:border-uh-green-500 transition-colors">
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-2">Privacy Notice (POPIA)</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">Transparency, lawful bases, rights, operators, breach notices.</p>
       </a>
         
-      <a href="#terms-conditions" class="block rounded-2xl border border-uh-green-100 p-6 hover:border-uh-green-500 hover:shadow-md transition">
-        <h4 class="font-display font-bold text-uh-green-800 mb-2">Terms &amp; Conditions</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">Enabler role, telehealth, e-scripts, acceptable use, law &amp; liability.</p>
+      <a href="#terms-conditions" class="block rounded-2xl border border-gray-200 p-6 hover:border-uh-green-500 transition-colors">
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-2">Terms &amp; Conditions</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">Enabler role, telehealth, e-scripts, acceptable use, law &amp; liability.</p>
       </a>
         
-      <a href="#electronic-prescriptions" class="block rounded-2xl border border-uh-green-100 p-6 hover:border-uh-green-500 hover:shadow-md transition">
-        <h4 class="font-display font-bold text-uh-green-800 mb-2">Electronic Prescriptions</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">ECTA recognition; SAPC Reg 33 verification; permanent copy.</p>
+      <a href="#electronic-prescriptions" class="block rounded-2xl border border-gray-200 p-6 hover:border-uh-green-500 transition-colors">
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-2">Electronic Prescriptions</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">ECTA recognition; SAPC Reg 33 verification; permanent copy.</p>
       </a>
         
-      <a href="#paia-essentials" class="block rounded-2xl border border-uh-green-100 p-6 hover:border-uh-green-500 hover:shadow-md transition">
-        <h4 class="font-display font-bold text-uh-green-800 mb-2">PAIA Essentials</h4>
-        <p class="text-sm text-uh-green-950/70 leading-relaxed">Section 51 manual; requests; forms/fees; remedies.</p>
+      <a href="#paia-essentials" class="block rounded-2xl border border-gray-200 p-6 hover:border-uh-green-500 transition-colors">
+        <h4 class="font-display font-semibold text-uh-ink-900 mb-2">PAIA Essentials</h4>
+        <p class="text-sm text-uh-ink-600 leading-relaxed">Section 51 manual; requests; forms/fees; remedies.</p>
       </a>
       </div>
     </section>
     <section id="privacy-notice" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Privacy Notice (POPIA)</h3>
-      <div class="rounded-2xl border border-uh-green-100 p-6 sm:p-8">
-        <ul class="space-y-4 text-uh-green-950/80 leading-relaxed">
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Scope.</strong> Applies to the Ubuntu Health website and Doctors/Patients apps. We process special personal information (health data) in line with legal and ethical duties.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Information we collect.</strong> Identification &amp; contact; health information (symptoms, diagnoses, notes, prescriptions, referrals, medication history, results); account/technical data; website cookies.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Purposes &amp; lawful bases.</strong> Provide healthcare via registered practitioners (and informed consent where required); maintain accurate clinical records (HPCSA/NHA); ensure security; service communications; optional marketing only with consent.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Consent &amp; capacity.</strong> Specific, informed, voluntary; can be withdrawn. For minors/incapacitated persons, NHA hierarchy applies.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Operators.</strong> POPIA-compliant contracts; process on documented instructions with appropriate safeguards.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Cross-border.</strong> Data stored in SA; if transfers occur, POPIA s72 safeguards will apply.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Security.</strong> Encryption at rest/in transit; MFA; RBAC; audit logging; secure backups; vulnerability management; incident response.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Retention.</strong> Clinical records per HPCSA Booklet 9 &amp; National Archives/DoH SOP; non-clinical data retained only as necessary or by law.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Rights.</strong> Access, correction, objection, consent withdrawal, deletion where legally permissible; complaints to Information Regulator.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Breach notification.</strong> Notify affected individuals and the Information Regulator as soon as reasonably possible, with details and mitigation steps.</span></li>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Privacy Notice (POPIA)</h3>
+      <div class="rounded-2xl border border-gray-200 p-6 sm:p-8">
+        <ul class="space-y-4 text-uh-ink-600 leading-relaxed">
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Scope.</strong> Applies to the Ubuntu Health website and Doctors/Patients apps. We process special personal information (health data) in line with legal and ethical duties.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Information we collect.</strong> Identification &amp; contact; health information (symptoms, diagnoses, notes, prescriptions, referrals, medication history, results); account/technical data; website cookies.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Purposes &amp; lawful bases.</strong> Provide healthcare via registered practitioners (and informed consent where required); maintain accurate clinical records (HPCSA/NHA); ensure security; service communications; optional marketing only with consent.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Consent &amp; capacity.</strong> Specific, informed, voluntary; can be withdrawn. For minors/incapacitated persons, NHA hierarchy applies.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Operators.</strong> POPIA-compliant contracts; process on documented instructions with appropriate safeguards.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Cross-border.</strong> Data stored in SA; if transfers occur, POPIA s72 safeguards will apply.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Security.</strong> Encryption at rest/in transit; MFA; RBAC; audit logging; secure backups; vulnerability management; incident response.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Retention.</strong> Clinical records per HPCSA Booklet 9 &amp; National Archives/DoH SOP; non-clinical data retained only as necessary or by law.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Rights.</strong> Access, correction, objection, consent withdrawal, deletion where legally permissible; complaints to Information Regulator.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Breach notification.</strong> Notify affected individuals and the Information Regulator as soon as reasonably possible, with details and mitigation steps.</span></li>
         </ul>
       </div>
     </section>
     <section id="terms-conditions" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Terms & Conditions</h3>
-      <div class="rounded-2xl border border-uh-green-100 p-6 sm:p-8">
-        <ul class="space-y-4 text-uh-green-950/80 leading-relaxed">
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Enabler role.</strong> Ubuntu Health provides software infrastructure; clinicians remain responsible for clinical decisions.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Eligibility &amp; accounts.</strong> 18+ or competent consent; clinicians registered with HPCSA; credential confidentiality.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Telehealth.</strong> Provided by registered practitioners per Booklet 10; consent when enabled; proper documentation.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Prescriptions &amp; e-scripts.</strong> Valid electronic signatures (ECTA); direct pharmacy transmission preferred; if patient-relayed, pharmacy must verify and keep permanent copy; no alterations/re-use.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Acceptable use &amp; security.</strong> No interference/unauthorised access; accounts may be suspended for violations.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Availability &amp; changes.</strong> High availability target but no guarantee; material changes notified.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-green-900">Liability &amp; law.</strong> Indirect/consequential damages excluded (where permitted); South African law &amp; competent courts.</span></li>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Terms & Conditions</h3>
+      <div class="rounded-2xl border border-gray-200 p-6 sm:p-8">
+        <ul class="space-y-4 text-uh-ink-600 leading-relaxed">
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Enabler role.</strong> Ubuntu Health provides software infrastructure; clinicians remain responsible for clinical decisions.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Eligibility &amp; accounts.</strong> 18+ or competent consent; clinicians registered with HPCSA; credential confidentiality.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Telehealth.</strong> Provided by registered practitioners per Booklet 10; consent when enabled; proper documentation.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Prescriptions &amp; e-scripts.</strong> Valid electronic signatures (ECTA); direct pharmacy transmission preferred; if patient-relayed, pharmacy must verify and keep permanent copy; no alterations/re-use.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Acceptable use &amp; security.</strong> No interference/unauthorised access; accounts may be suspended for violations.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Availability &amp; changes.</strong> High availability target but no guarantee; material changes notified.</span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span><strong class="text-uh-ink-900">Liability &amp; law.</strong> Indirect/consequential damages excluded (where permitted); South African law &amp; competent courts.</span></li>
         </ul>
       </div>
     </section>
     <section id="cookie-policy" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Cookie & Tracking Policy (Website)</h3>
-      <div class="uh-mint-box rounded-2xl p-6 sm:p-8"><ul class="space-y-4 text-uh-green-950/80 leading-relaxed"><li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>Consent interface.</strong> Non-essential cookies only with consent; banner shows <em>Accept all / Reject all / Settings</em>; persistent <em>Privacy Settings</em> link.</span></li>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Cookie & Tracking Policy (Website)</h3>
+      <div class="uh-mint-box rounded-2xl p-6 sm:p-8"><ul class="space-y-4 text-uh-ink-600 leading-relaxed"><li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>Consent interface.</strong> Non-essential cookies only with consent; banner shows <em>Accept all / Reject all / Settings</em>; persistent <em>Privacy Settings</em> link.</span></li>
           <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>Categories.</strong> Strictly necessary; optional analytics; optional marketing. Consent logs maintained; choices honoured.</span></li></ul></div>
     </section>
     <section id="telehealth-consent" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Telehealth & Informed Consent (HPCSA Booklet 10)</h3>
-      <div class="uh-mint-box rounded-2xl p-6 sm:p-8 text-uh-green-950/80 leading-relaxed">Identity verification; informed consent; explanation of limitations &amp; alternatives; documentation; confidentiality; escalation to in-person care when clinically necessary.</div>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Telehealth & Informed Consent (HPCSA Booklet 10)</h3>
+      <div class="uh-mint-box rounded-2xl p-6 sm:p-8 text-uh-ink-600 leading-relaxed">Identity verification; informed consent; explanation of limitations &amp; alternatives; documentation; confidentiality; escalation to in-person care when clinically necessary.</div>
     </section>
     <section id="electronic-prescriptions" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Electronic Prescriptions (ECTA & SAPC Guidance)</h3>
-      <div class="uh-mint-box rounded-2xl p-6 sm:p-8 text-uh-green-950/80 leading-relaxed">Computer-generated &amp; electronically signed prescriptions recognised by ECTA. Direct transmission prescriber &rarr; pharmacy preferred; if sent to patient, pharmacy must verify authenticity &amp; store permanent copy.</div>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Electronic Prescriptions (ECTA & SAPC Guidance)</h3>
+      <div class="uh-mint-box rounded-2xl p-6 sm:p-8 text-uh-ink-600 leading-relaxed">Computer-generated &amp; electronically signed prescriptions recognised by ECTA. Direct transmission prescriber &rarr; pharmacy preferred; if sent to patient, pharmacy must verify authenticity &amp; store permanent copy.</div>
     </section>
     <section id="paia-essentials" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">PAIA — Essentials</h3>
-      <div class="uh-mint-box rounded-2xl p-6 sm:p-8 text-uh-green-950/80 leading-relaxed">We publish a Section 51 PAIA Manual explaining how to request records, categories held, and grounds for refusal/redaction aligned with POPIA. Requests follow prescribed forms/fees and statutory timelines; remedies via the Information Regulator or courts.</div>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">PAIA — Essentials</h3>
+      <div class="uh-mint-box rounded-2xl p-6 sm:p-8 text-uh-ink-600 leading-relaxed">We publish a Section 51 PAIA Manual explaining how to request records, categories held, and grounds for refusal/redaction aligned with POPIA. Requests follow prescribed forms/fees and statutory timelines; remedies via the Information Regulator or courts.</div>
     </section>
     <section id="popia-rights-dsar" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">POPIA Rights & DSAR</h3>
-      <div class="uh-mint-box rounded-2xl p-6 sm:p-8"><ul class="space-y-4 text-uh-green-950/80 leading-relaxed"><li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>Submit requests.</strong> <a href="mailto:privacy@ubuntuhealth.co.za" class="text-uh-teal-600 underline">privacy@ubuntuhealth.co.za</a> or in-app Privacy &amp; Data settings.</span></li>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">POPIA Rights & DSAR</h3>
+      <div class="uh-mint-box rounded-2xl p-6 sm:p-8"><ul class="space-y-4 text-uh-ink-600 leading-relaxed"><li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>Submit requests.</strong> <a href="mailto:privacy@ubuntuhealth.co.za" class="text-uh-teal-600 underline">privacy@ubuntuhealth.co.za</a> or in-app Privacy &amp; Data settings.</span></li>
           <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>Verification.</strong> ID / multi-factor checks; responses within statutory timeframes; accessible format.</span></li>
           <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>Deletion constraints.</strong> Clinical record duties, legal holds, and third-party privacy may limit deletion.</span></li></ul></div>
     </section>
     <section id="records-retention" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Records Retention (HPCSA/NHA)</h3>
-      <div class="uh-mint-box rounded-2xl p-6 sm:p-8"><ul class="space-y-4 text-uh-green-950/80 leading-relaxed"><li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>General records:</strong> at least 6 years after becoming dormant.</span></li>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Records Retention (HPCSA/NHA)</h3>
+      <div class="uh-mint-box rounded-2xl p-6 sm:p-8"><ul class="space-y-4 text-uh-ink-600 leading-relaxed"><li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>General records:</strong> at least 6 years after becoming dormant.</span></li>
           <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>Minors:</strong> retain until 21st birthday.</span></li>
           <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>Occupational health:</strong> 20 years post-treatment.</span></li>
           <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span><strong>Mentally impaired patients:</strong> until patient&rsquo;s death.</span></li>
           <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-700 shrink-0"></span><span>Final disposal per National Archives &amp; Dept of Health SOP with secure destruction &amp; logging.</span></li></ul></div>
     </section>
     <section id="security-incident" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Security & Incident Response (POPIA)</h3>
-      <div class="uh-mint-box rounded-2xl p-6 sm:p-8 text-uh-green-950/80 leading-relaxed">Safeguards: encryption, MFA, RBAC, audit trails, backups, vulnerability management. Process: Detect &rarr; Contain &rarr; Assess (scope, risk) &rarr; Notify Information Regulator &amp; affected individuals as soon as reasonably possible &rarr; Remediate &rarr; Review &amp; improve. Evidence preserved; communications factual &amp; clear.</div>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Security & Incident Response (POPIA)</h3>
+      <div class="uh-mint-box rounded-2xl p-6 sm:p-8 text-uh-ink-600 leading-relaxed">Safeguards: encryption, MFA, RBAC, audit trails, backups, vulnerability management. Process: Detect &rarr; Contain &rarr; Assess (scope, risk) &rarr; Notify Information Regulator &amp; affected individuals as soon as reasonably possible &rarr; Remediate &rarr; Review &amp; improve. Evidence preserved; communications factual &amp; clear.</div>
     </section>
     <section id="operators-subprocessors" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Operators / Subprocessors</h3>
-      <div class="uh-mint-box rounded-2xl p-6 sm:p-8 text-uh-green-950/80 leading-relaxed">We will publish our current operator list (hosting, messaging, analytics) here. Each operator is bound by POPIA-compliant contractual terms including security safeguards, confidentiality and breach assistance. Request the current list via <a href="mailto:privacy@ubuntuhealth.co.za" class="text-uh-green-800 underline">privacy@ubuntuhealth.co.za</a>.</div>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Operators / Subprocessors</h3>
+      <div class="uh-mint-box rounded-2xl p-6 sm:p-8 text-uh-ink-600 leading-relaxed">We will publish our current operator list (hosting, messaging, analytics) here. Each operator is bound by POPIA-compliant contractual terms including security safeguards, confidentiality and breach assistance. Request the current list via <a href="mailto:privacy@ubuntuhealth.co.za" class="text-uh-green-800 underline">privacy@ubuntuhealth.co.za</a>.</div>
     </section>
     <section id="faq" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">FAQ</h3>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">FAQ</h3>
       
       <div class="flex flex-col gap-6">
         
-      <div class="rounded-2xl border border-uh-green-100 p-6 sm:p-8">
-        <h4 class="font-display font-bold text-uh-teal-600 text-lg mb-3">How do you handle patient data?</h4>
-        <div class="text-sm text-uh-green-950/75 leading-relaxed space-y-4">
+      <div class="rounded-2xl border border-gray-200 p-6 sm:p-8">
+        <h4 class="font-display font-semibold text-uh-teal-600 text-lg mb-3">How do you handle patient data?</h4>
+        <div class="text-sm text-uh-ink-600 leading-relaxed space-y-4">
       <p>Data is processed to provide healthcare services and maintain clinical records in line with HPCSA/NHA. Access is strictly controlled; audit trails capture record access &amp; changes.</p>
       <p>Our software uses advanced AI inference to process your anonymized patient data through pre-trained, medically specialized language models, helping doctors generate potential diagnostic insights and streamline clinical decision-making. This inference applies a fixed model to new inputs without retraining or altering it, ensuring rapid, secure assistance tailored to South African private practices. Patients and doctors retain full control, with outputs always requiring professional review per HPCSA guidelines.</p>
-      <h5 class="font-display font-bold text-uh-green-900 pt-2">Key Features Covered</h5>
+      <h5 class="font-display font-semibold text-uh-ink-900 pt-2">Key Features Covered</h5>
       <ul class="list-disc list-inside space-y-2">
         <li><strong>Data Handling:</strong> Only de-identified data (stripped of names, IDs, and personal links) is processed, complying with POPIA&rsquo;s special information rules on purpose limitation and security.</li>
         <li><strong>User Benefits:</strong> Faster symptom analysis, treatment suggestions, and admin efficiency&mdash;enhancing care without replacing clinical judgment.</li>
         <li><strong>Transparency:</strong> No data storage by the AI provider beyond the query session; audit logs track usage for accountability.</li>
       </ul>
-      <h5 class="font-display font-bold text-uh-green-900 pt-2">Consent and Controls</h5>
+      <h5 class="font-display font-semibold text-uh-ink-900 pt-2">Consent and Controls</h5>
       <p>By using our software, you consent to this anonymized inference for diagnostic support, with easy opt-out options in settings. Withdraw anytime via account preferences, triggering immediate cessation and data purge requests. We prioritize trust through clear disclosures, regular compliance audits, and human oversight, aligning with National Health Act and HPCSA ethical AI standards.</p>
     </div>
       </div>
         
-      <div class="rounded-2xl border border-uh-green-100 p-6 sm:p-8">
-        <h4 class="font-display font-bold text-uh-teal-600 text-lg mb-3">Do you encrypt data at rest?</h4>
-        <div class="text-sm text-uh-green-950/75 leading-relaxed space-y-4"><p>Yes. Industry-standard encryption at rest and in transit; key management &amp; rotation per policy.</p></div>
+      <div class="rounded-2xl border border-gray-200 p-6 sm:p-8">
+        <h4 class="font-display font-semibold text-uh-teal-600 text-lg mb-3">Do you encrypt data at rest?</h4>
+        <div class="text-sm text-uh-ink-600 leading-relaxed space-y-4"><p>Yes. Industry-standard encryption at rest and in transit; key management &amp; rotation per policy.</p></div>
       </div>
         
-      <div class="rounded-2xl border border-uh-green-100 p-6 sm:p-8">
-        <h4 class="font-display font-bold text-uh-teal-600 text-lg mb-3">Where is the data stored?</h4>
-        <div class="text-sm text-uh-green-950/75 leading-relaxed space-y-4"><p>Hosted in South Africa. If cross-border transfers are introduced, POPIA s72 safeguards will apply.</p></div>
+      <div class="rounded-2xl border border-gray-200 p-6 sm:p-8">
+        <h4 class="font-display font-semibold text-uh-teal-600 text-lg mb-3">Where is the data stored?</h4>
+        <div class="text-sm text-uh-ink-600 leading-relaxed space-y-4"><p>Hosted in South Africa. If cross-border transfers are introduced, POPIA s72 safeguards will apply.</p></div>
       </div>
       </div>
     </section>
     <section id="governance-contact" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">Governance & Contact</h3>
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">Governance & Contact</h3>
       
-      <div class="rounded-2xl border border-uh-green-100 p-6 sm:p-8 text-uh-green-950/80 leading-relaxed space-y-2">
-        <p><strong class="text-uh-green-900">Information Officer:</strong> <em class="text-uh-green-950/50">[add name]</em> &middot; <strong class="text-uh-green-900">Email:</strong> <a href="mailto:privacy@ubuntuhealth.co.za" class="text-uh-teal-600 underline">privacy@ubuntuhealth.co.za</a></p>
-        <p><strong class="text-uh-green-900">Deputy Information Officer(s):</strong> <em class="text-uh-green-950/50">[add names]</em></p>
-        <p><strong class="text-uh-green-900">Support:</strong> <a href="mailto:support@ubuntuhealth.co.za" class="text-uh-teal-600 underline">support@ubuntuhealth.co.za</a></p>
-        <p><strong class="text-uh-green-900">Address:</strong> Unit 5, 4 Derby Place, Derby Downs Office Park, Westville, KwaZulu-Natal 3629.</p>
+      <div class="rounded-2xl border border-gray-200 p-6 sm:p-8 text-uh-ink-600 leading-relaxed space-y-2">
+        <p><strong class="text-uh-ink-900">Information Officer:</strong> <em class="text-uh-ink-600/60">[add name]</em> &middot; <strong class="text-uh-ink-900">Email:</strong> <a href="mailto:privacy@ubuntuhealth.co.za" class="text-uh-teal-600 underline">privacy@ubuntuhealth.co.za</a></p>
+        <p><strong class="text-uh-ink-900">Deputy Information Officer(s):</strong> <em class="text-uh-ink-600/60">[add names]</em></p>
+        <p><strong class="text-uh-ink-900">Support:</strong> <a href="mailto:support@ubuntuhealth.co.za" class="text-uh-teal-600 underline">support@ubuntuhealth.co.za</a></p>
+        <p><strong class="text-uh-ink-900">Address:</strong> Unit 5, 4 Derby Place, Derby Downs Office Park, Westville, KwaZulu-Natal 3629.</p>
       </div>
     </section>
     <section id="references" class="scroll-mt-32 mb-14">
-      <h3 class="font-display text-2xl sm:text-3xl font-bold text-uh-green-900 mb-6">References</h3>
-      <div class="rounded-2xl border border-uh-green-100 p-6 sm:p-8">
-        <ul class="space-y-4 text-uh-green-950/80 leading-relaxed">
+      <h3 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-6">References</h3>
+      <div class="rounded-2xl border border-gray-200 p-6 sm:p-8">
+        <ul class="space-y-4 text-uh-ink-600 leading-relaxed">
           <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span>POPIA Condition 7 (security safeguards; operator duties; security compromises)</span></li>
           <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span>HPCSA Booklet 9 (patient records) &amp; Booklet 10 (telehealth)</span></li>
           <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-uh-green-600 shrink-0"></span><span>National Health Act 61 of 2003</span></li>
@@ -363,11 +359,11 @@
       </div>
     </section></div>
 </section>
-</main><footer class="uh-wave-bg text-white">
+</main><footer class="uh-surface-dark text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid gap-12 md:grid-cols-3">
     <div>
-      <h3 class="font-display text-2xl tracking-[0.15em] font-light mb-4">UBUNTU HEALTH</h3>
-      <p class="text-white/80 leading-relaxed mb-6 max-w-sm">Ubuntu Health is a cloud-based, AI-driven digital health platform purpose-built to elevate patient care, optimise medical operational processes and simplify financial management, for both Hospital Groups and Medical Practices.</p>
+      <h3 class="font-display text-xl font-medium mb-4">Ubuntu Health</h3>
+      <p class="text-white/70 leading-relaxed mb-6 max-w-sm">Ubuntu Health is a cloud-based, AI-driven digital health platform purpose-built to elevate patient care, optimise medical operational processes and simplify financial management, for both Hospital Groups and Medical Practices.</p>
       <div class="flex gap-3">
           <a href="#" aria-label="facebook" class="w-9 h-9 rounded-full bg-uh-teal-600 flex items-center justify-center hover:bg-uh-teal-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.2 20v-7.3h2.4l.4-2.8h-2.8v-1.8c0-.8.2-1.3 1.4-1.3h1.5V4.2c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v2h-2.4v2.8h2.4V20h2.7z" fill="currentColor" stroke="none"/></svg></a>
           <a href="#" aria-label="x" class="w-9 h-9 rounded-full bg-uh-teal-600 flex items-center justify-center hover:bg-uh-teal-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></a>

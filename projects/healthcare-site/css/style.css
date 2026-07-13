@@ -1,17 +1,19 @@
-/* Ubuntu Health — shared styles (fonts, brand gradients, patterns not covered by Tailwind utilities) */
+/* Ubuntu Health — shared styles (Guava-inspired minimalist restyle: flat color, no gradients) */
 
 :root {
   --uh-green-950: #08251c;
   --uh-green-900: #0c3b2c;
   --uh-green-800: #12503c;
-  --uh-green-600: #2ea84f;
+  --uh-green-700: #1f8a3e;
+  --uh-green-600: #1c9457;
   --uh-green-500: #3fbe5c;
   --uh-teal-600: #12808f;
   --uh-teal-500: #1a9db0;
-  --uh-lime-400: #8ed15a;
   --uh-red-700: #a92a2a;
-  --uh-mint-50: #eafcee;
-  --uh-ink-900: #10241d;
+  --uh-mist-50: #eef3f2;
+  --uh-mist-100: #e3ebe8;
+  --uh-ink-900: #1c2b26;
+  --uh-ink-600: #526059;
 }
 
 html {
@@ -27,71 +29,46 @@ h1, h2, h3, h4, .font-display {
   font-family: "Poppins", "Inter", system-ui, sans-serif;
 }
 
-/* Subtle wavy mesh used behind the dark-green header/footer bands */
-.uh-wave-bg {
+/* Flat brand-color surfaces (no gradients, no mesh texture) */
+.uh-surface-dark {
   background-color: var(--uh-green-900);
-  background-image:
-    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.06) 0, transparent 45%),
-    radial-gradient(circle at 85% 80%, rgba(255, 255, 255, 0.05) 0, transparent 40%),
-    linear-gradient(120deg, var(--uh-green-950) 0%, var(--uh-green-900) 45%, var(--uh-green-800) 100%);
+}
+
+.uh-surface-brand {
+  background-color: var(--uh-green-600);
+}
+
+.uh-surface-mist {
+  background-color: var(--uh-mist-50);
+}
+
+.uh-surface-teal {
+  background-color: var(--uh-teal-600);
 }
 
 .uh-topbar {
   background: var(--uh-red-700);
 }
 
-/* Diagonal teal -> green gradient used on icon tiles and feature bands */
-.uh-gradient-card {
-  background: linear-gradient(135deg, var(--uh-teal-600) 0%, var(--uh-green-500) 100%);
-}
-
-.uh-gradient-icon {
-  background: linear-gradient(135deg, var(--uh-teal-600) 0%, var(--uh-lime-400) 100%);
-}
-
-.uh-gradient-diagonal {
-  background: linear-gradient(115deg, #57b8c4 0%, #8ed15a 100%);
-}
-
-.uh-gradient-callout {
-  background: linear-gradient(120deg, var(--uh-lime-400) 0%, var(--uh-teal-600) 100%);
-}
-
-.uh-gradient-band {
-  background: linear-gradient(90deg, rgba(26, 157, 176, 0.55) 0%, rgba(63, 190, 92, 0.75) 100%);
-}
-
 .uh-mint-box {
-  background: var(--uh-mint-50);
-  border: 1px solid rgba(46, 168, 79, 0.25);
+  background: var(--uh-mist-50);
+  border: 1px solid #d8e4de;
 }
 
-/* Arc-icon feature cards (Doctor Features / Patient Features on Practices page) */
-.uh-arc-icon {
-  position: relative;
-  width: 4.5rem;
+/* Single, reusable flat icon badge (replaces the old gradient tiles / arc icons) */
+.uh-icon-badge {
+  width: 3.25rem;
   height: 3.25rem;
-  margin: 0 auto;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
-
-.uh-arc-icon::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 2.5px solid var(--uh-teal-500);
-  border-bottom: none;
-  border-radius: 999px 999px 0 0;
-}
-
-.uh-arc-icon svg {
-  position: relative;
-  z-index: 1;
-  width: 1.75rem;
-  height: 1.75rem;
-  margin: 0.65rem auto 0;
-  display: block;
-  color: var(--uh-green-800);
-}
+.uh-icon-badge svg { width: 1.5rem; height: 1.5rem; }
+.uh-icon-badge.uh-badge-green { background: var(--uh-green-600); color: white; }
+.uh-icon-badge.uh-badge-teal { background: var(--uh-teal-600); color: white; }
+.uh-icon-badge.uh-badge-mist { background: var(--uh-mist-100); color: var(--uh-green-800); }
 
 /* Persistent floating action buttons */
 .uh-fab {
@@ -106,7 +83,7 @@ h1, h2, h3, h4, .font-display {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.25);
   z-index: 40;
   transition: transform 0.15s ease;
 }
@@ -121,11 +98,11 @@ h1, h2, h3, h4, .font-display {
   border-radius: 999px;
   background: white;
   color: var(--uh-teal-500);
-  border: 2px solid var(--uh-teal-500);
+  border: 1.5px solid var(--uh-teal-500);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 14px -8px rgba(0, 0, 0, 0.2);
   z-index: 40;
   opacity: 0;
   pointer-events: none;
@@ -141,12 +118,12 @@ h1, h2, h3, h4, .font-display {
 .uh-compliance-nav a {
   display: block;
   text-align: center;
-  padding: 0.75rem 1rem;
-  border: 1px solid #d8e4de;
-  border-radius: 0.75rem;
-  color: var(--uh-green-800);
-  font-weight: 600;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  padding: 0.7rem 1rem;
+  border: 1px solid #dde6e1;
+  border-radius: 0.6rem;
+  color: var(--uh-ink-600);
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 .uh-compliance-nav a:hover,
 .uh-compliance-nav a.uh-active {

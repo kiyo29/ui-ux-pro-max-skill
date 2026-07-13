@@ -11,161 +11,156 @@
 <link rel="stylesheet" href="css/tailwind.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white text-uh-green-950 antialiased">
-<header class="uh-wave-bg sticky top-0 z-50 text-white shadow-lg">
+<body class="bg-white text-uh-ink-900 antialiased">
+<header class="bg-white sticky top-0 z-50 border-b border-gray-100">
   <div class="uh-topbar h-1 w-full"></div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-start justify-between gap-4">
-      <div class="flex flex-col gap-3">
-        <a href="index.html" class="font-display text-xl sm:text-2xl tracking-[0.25em] font-light">UBUNTU HEALTH</a>
-        <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 bg-white text-uh-green-800 rounded-full pr-5 py-1 w-fit shadow-md hover:shadow-lg transition-shadow">
-          <span class="w-8 h-8 rounded-full bg-uh-green-800 text-white flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></span>
-          <span class="text-xs font-bold tracking-wide">BOOK A DEMO</span>
-        </a>
-      </div>
+    <div class="flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2.5 shrink-0">
+        <span class="w-8 h-8 rounded-full border-2 border-uh-green-600 flex items-center justify-center">
+          <span class="w-2.5 h-2.5 rounded-full bg-uh-green-600"></span>
+        </span>
+        <span class="font-display text-lg sm:text-xl font-medium text-uh-ink-900">Ubuntu Health</span>
+      </a>
 
-      <nav class="hidden lg:flex items-center gap-1 text-sm font-semibold pt-1">
-        <a href="index.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Home</a>
-        <a href="about.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">About Us</a>
-        <a href="compliance.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Compliance</a>
-        <a href="hospitals.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Hospitals</a>
-        <a href="practices.html" class="px-4 py-2 rounded-md transition-colors bg-uh-green-600 text-white">Practices</a>
-        <a href="why-us.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Why Us</a>
-        <a href="contact.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10">Contact Us</a>
+      <nav class="hidden lg:flex items-center gap-1">
+        <a href="index.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Home</a>
+        <a href="about.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">About Us</a>
+        <a href="compliance.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Compliance</a>
+        <a href="hospitals.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Hospitals</a>
+        <a href="practices.html" class="px-3 py-2 text-[15px] transition-colors text-uh-green-700 font-semibold">Practices</a>
+        <a href="why-us.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Why Us</a>
+        <a href="contact.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Contact Us</a>
       </nav>
 
-      <button id="uh-menu-btn" class="lg:hidden mt-1 p-2 rounded-md hover:bg-white/10" aria-label="Toggle menu" aria-expanded="false">
+      <div class="hidden sm:flex items-center gap-2">
+        <a href="contact.html" class="rounded-full bg-uh-green-600 hover:bg-uh-green-700 text-white text-sm font-semibold px-5 py-2.5 transition-colors">Book a Demo</a>
+      </div>
+
+      <button id="uh-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-50 text-uh-ink-900" aria-label="Toggle menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
 
-    <div id="uh-mobile-menu" class="hidden lg:hidden mt-4 flex flex-col gap-1 text-sm font-semibold pb-2">
-      <a href="index.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Home</a>
-        <a href="about.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">About Us</a>
-        <a href="compliance.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Compliance</a>
-        <a href="hospitals.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Hospitals</a>
-        <a href="practices.html" class="px-4 py-2 rounded-md transition-colors bg-uh-green-600 text-white block">Practices</a>
-        <a href="why-us.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Why Us</a>
-        <a href="contact.html" class="px-4 py-2 rounded-md transition-colors text-white/90 hover:bg-white/10 block">Contact Us</a>
-      <a href="contact.html" class="sm:hidden mt-2 inline-flex items-center gap-2 bg-white text-uh-green-800 rounded-full pl-1 pr-5 py-1 w-fit">
-        <span class="w-7 h-7 rounded-full bg-uh-green-800 text-white flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></span>
-        <span class="text-xs font-bold tracking-wide">BOOK A DEMO</span>
-      </a>
+    <div id="uh-mobile-menu" class="hidden lg:hidden mt-3 flex flex-col gap-1 pb-2 border-t border-gray-100 pt-3">
+      <a href="index.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Home</a>
+        <a href="about.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">About Us</a>
+        <a href="compliance.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Compliance</a>
+        <a href="hospitals.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Hospitals</a>
+        <a href="practices.html" class="px-3 py-2 text-[15px] transition-colors text-uh-green-700 font-semibold block">Practices</a>
+        <a href="why-us.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Why Us</a>
+        <a href="contact.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Contact Us</a>
+      <a href="contact.html" class="sm:hidden mt-2 inline-flex justify-center rounded-full bg-uh-green-600 text-white text-sm font-semibold px-5 py-2.5 w-fit">Book a Demo</a>
     </div>
   </div>
 </header>
 <main>
-<section class="relative">
-  <div class="h-[26rem] sm:h-[30rem] w-full bg-cover bg-center relative" style="background-image:url('https://placehold.co/1600x700/8ed15a/0c3b2c?text=Doctor+in+consulting+room&font=poppins')" role="img" aria-label="Doctor in consulting room"></div>
-  <div class="absolute inset-0 bg-gradient-to-r from-uh-green-900/70 via-uh-green-900/35 to-transparent"></div>
-  <div class="absolute inset-0 flex items-center">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mb-4">Ubuntu Health for<br>Practices</h1>
-      <p class="text-white/90 text-xl leading-relaxed max-w-md">Streamline quality patient care, from booking to billing</p>
-    </div>
+<section class="uh-surface-mist">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+    <h1 class="font-display text-3xl sm:text-5xl font-semibold text-uh-ink-900 mb-4">Ubuntu Health for practices</h1>
+    <p class="text-uh-ink-600 text-xl leading-relaxed max-w-md">Streamline quality patient care, from booking to billing.</p>
   </div>
 </section>
 
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-  <div class="rounded-2xl h-72 md:h-[24rem] w-full shadow-xl bg-cover bg-center relative" style="background-image:url('https://placehold.co/800x900/eafcee/12503c?text=Doctor+holding+clipboard&font=poppins')" role="img" aria-label="Doctor holding clipboard"></div>
+  <div class="h-64 sm:h-80 md:h-full w-full rounded-xl border border-gray-200 bg-cover bg-center relative" style="background-image:url('https://placehold.co/800x900/ffffff/12503c?text=Doctor+holding+clipboard&font=poppins')" role="img" aria-label="Doctor holding clipboard"></div>
   <div>
-    <h2 class="font-display text-3xl sm:text-4xl font-bold text-uh-green-900 mb-5">Ubuntu Health For <span class="text-uh-teal-600">Practices</span></h2>
-    <p class="text-uh-green-950/70 leading-relaxed text-lg mb-4">is a cloud-based, AI-driven digital health platform curated to enhance patient care, simplify consults and streamline financial management.</p>
-    <p class="text-uh-green-950/70 leading-relaxed text-lg">Through intuitive Doctor and Patient mobile &amp; web apps, Ubuntu Health simplifies the practice management empowers you to deliver best-of-breed care to your patients.</p>
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold text-uh-ink-900 mb-5">Ubuntu Health for <span class="text-uh-teal-600">practices</span></h2>
+    <p class="text-uh-ink-600 leading-relaxed text-lg mb-4">is a cloud-based, AI-driven digital health platform curated to enhance patient care, simplify consults and streamline financial management.</p>
+    <p class="text-uh-ink-600 leading-relaxed text-lg">Through intuitive Doctor and Patient mobile &amp; web apps, Ubuntu Health simplifies practice management and empowers you to deliver best-of-breed care to your patients.</p>
   </div>
 </section>
 
-<section class="uh-gradient-diagonal py-16 sm:py-20">
+<section class="uh-surface-mist py-16 sm:py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-center font-display text-3xl sm:text-4xl font-bold text-uh-green-900 mb-14">Doctor Features</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="rounded-2xl bg-white shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/><path d="M9 14.5l2 2 4-4.5"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">Booking Management</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">Seamlessly manage availability, slots and bookings from existing and new patients through our AI booking engine.</p>
+    <h2 class="text-center font-display text-3xl sm:text-4xl font-semibold text-uh-ink-900 mb-14">Doctor features</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="rounded-2xl bg-white border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-green mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/><path d="M9 14.5l2 2 4-4.5"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">Booking management</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">Seamlessly manage availability, slots and bookings from existing and new patients through our AI booking engine.</p>
       </div>
-      <div class="rounded-2xl bg-white shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="1.5"/><path d="M16 10.5l5-2.5v8l-5-2.5"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">Teleconsults</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">Secure in-app video consults, linked to billing, eprescriptions, ereports and digital consult notes.</p>
+      <div class="rounded-2xl bg-white border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-teal mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="1.5"/><path d="M16 10.5l5-2.5v8l-5-2.5"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">Teleconsults</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">Secure in-app video consults, linked to billing, eprescriptions, ereports and digital consult notes.</p>
       </div>
-      <div class="rounded-2xl bg-white shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9.5" y="3" width="5" height="10" rx="2.5"/><path d="M6 11a6 6 0 0012 0M12 17v3.5M9 20.5h6"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">AI Medical Transcription</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">Ubuntu&rsquo;s AI listens, transcribes and summarises consults, allowing doctors to focus solely on patient.</p>
+      <div class="rounded-2xl bg-white border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-green mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9.5" y="3" width="5" height="10" rx="2.5"/><path d="M6 11a6 6 0 0012 0M12 17v3.5M9 20.5h6"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">AI medical transcription</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">Ubuntu&rsquo;s AI listens, transcribes and summarises consults, allowing doctors to focus solely on patient.</p>
       </div>
-      <div class="rounded-2xl bg-white shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="7" rx="6" ry="2.5"/><path d="M6 7v6c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V7"/><path d="M6 13v3c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-3"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">Medical Aid Claim Submissions</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">Ubuntu&rsquo;s integration with Medical Aids allows for seamless submission and tracking of claims.</p>
+      <div class="rounded-2xl bg-white border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-teal mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="7" rx="6" ry="2.5"/><path d="M6 7v6c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V7"/><path d="M6 13v3c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-3"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">Medical aid claim submissions</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">Ubuntu&rsquo;s integration with Medical Aids allows for seamless submission and tracking of claims.</p>
       </div>
-      <div class="rounded-2xl bg-white shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3.2"/><path d="M5 20c0-3.6 3.1-6.2 7-6.2s7 2.6 7 6.2"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">EHR</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">Securely store and access comprehensive patient health data, including medical history, diagnoses, lab results, and prescriptions, on-demand.</p>
+      <div class="rounded-2xl bg-white border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-green mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3.2"/><path d="M5 20c0-3.6 3.1-6.2 7-6.2s7 2.6 7 6.2"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">EHR</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">Securely store and access comprehensive patient health data, including medical history, diagnoses, lab results, and prescriptions, on-demand.</p>
       </div>
-      <div class="rounded-2xl bg-white shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7l4 4V20a1 1 0 01-1 1H7a1 1 0 01-1-1V4.5a1 1 0 011-1z"/><path d="M14 3.5V8h4"/><path d="M9 13h6M9 16.5h4"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">e-Prescriptions</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">Doctors can securely issue, refill, or cancel prescriptions directly from the app, ensuring accuracy and compliance with healthcare regulations.</p>
+      <div class="rounded-2xl bg-white border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-teal mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7l4 4V20a1 1 0 01-1 1H7a1 1 0 01-1-1V4.5a1 1 0 011-1z"/><path d="M14 3.5V8h4"/><path d="M9 13h6M9 16.5h4"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">e-Prescriptions</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">Doctors can securely issue, refill, or cancel prescriptions directly from the app, ensuring accuracy and compliance with healthcare regulations.</p>
       </div>
-      <div class="rounded-2xl bg-white shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h12v8H9l-3 3V5z"/><path d="M16 8h4v6l-2-2h-2z" opacity="0.55"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">Secure In-App Chat</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">End-to-end encrypted chat feature between Doctor and patient, ensuring that personal health information remains confidential. Doctors can manage patient questions &amp; followups all within a protected, POPIA-compliant environment.</p>
+      <div class="rounded-2xl bg-white border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-green mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h12v8H9l-3 3V5z"/><path d="M16 8h4v6l-2-2h-2z" opacity="0.55"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">Secure in-app chat</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">End-to-end encrypted chat feature between Doctor and patient, ensuring that personal health information remains confidential. Doctors can manage patient questions &amp; followups all within a protected, POPIA-compliant environment.</p>
       </div></div>
   </div>
 </section>
 
-<section class="py-16 sm:py-20">
+<section class="bg-white py-16 sm:py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-center font-display text-3xl sm:text-4xl font-bold text-uh-green-900 mb-14">Patient Features</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="rounded-2xl bg-white border border-uh-green-100 shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.3 15.3L20 20"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">Directory of all Medical Professionals / Facilities</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">Find trusted, Google rated healthcare providers with ease using Ubuntu&rsquo;s Directory</p>
+    <h2 class="text-center font-display text-3xl sm:text-4xl font-semibold text-uh-ink-900 mb-14">Patient features</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="rounded-2xl bg-[#eef3f2] border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-green mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.3 15.3L20 20"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">Directory of all medical professionals / facilities</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">Find trusted, Google rated healthcare providers with ease using Ubuntu&rsquo;s Directory</p>
       </div>
-      <div class="rounded-2xl bg-white border border-uh-green-100 shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="9.7" width="14" height="6" rx="3" transform="rotate(45 12 12.7)"/><path d="M9.7 9.4l5.4 5.4" transform="rotate(45 12 12.7)" stroke-width="1.3"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">Medication Tracker</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">Set personalised reminders for medications, vitamins and supplements, ensuring you never miss a dose.</p>
+      <div class="rounded-2xl bg-[#eef3f2] border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-teal mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="9.7" width="14" height="6" rx="3" transform="rotate(45 12 12.7)"/><path d="M9.7 9.4l5.4 5.4" transform="rotate(45 12 12.7)" stroke-width="1.3"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">Medication tracker</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">Set personalised reminders for medications, vitamins and supplements, ensuring you never miss a dose.</p>
       </div>
-      <div class="rounded-2xl bg-white border border-uh-green-100 shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.6 4.6L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.4L12 3z"/><circle cx="18" cy="17" r="2.3"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">Live health news</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">Ubuntu&rsquo;s live feed of verified health news ensures that patients are never left in the dark.</p>
+      <div class="rounded-2xl bg-[#eef3f2] border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-green mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.6 4.6L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.4L12 3z"/><circle cx="18" cy="17" r="2.3"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">Live health news</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">Ubuntu&rsquo;s live feed of verified health news ensures that patients are never left in the dark.</p>
       </div>
-      <div class="rounded-2xl bg-white border border-uh-green-100 shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/><path d="M9 14.5l2 2 4-4.5"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">Digital Bookings</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">Easily book consults with doctors through the web, mobile or WhatsApp channels.</p>
+      <div class="rounded-2xl bg-[#eef3f2] border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-teal mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/><path d="M9 14.5l2 2 4-4.5"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">Digital bookings</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">Easily book consults with doctors through the web, mobile or WhatsApp channels.</p>
       </div>
-      <div class="rounded-2xl bg-white border border-uh-green-100 shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.2V7A2.2 2.2 0 014.7 4.8h4.1c.4 0 .8.2 1 .5l.9.9c.2.3.6.5 1 .5h4.6A2.2 2.2 0 0118.5 9v.2M2.5 8.2h16v9A2.3 2.3 0 0116.2 19.5H4.8A2.3 2.3 0 012.5 17.2v-9z"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">Medical Documentation Library</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">Access a secure repository of all your medical consults, diagnoses, lab results and prescriptions, across doctors, from the comfort of your Ubuntu app.</p>
+      <div class="rounded-2xl bg-[#eef3f2] border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-green mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.2V7A2.2 2.2 0 014.7 4.8h4.1c.4 0 .8.2 1 .5l.9.9c.2.3.6.5 1 .5h4.6A2.2 2.2 0 0118.5 9v.2M2.5 8.2h16v9A2.3 2.3 0 0116.2 19.5H4.8A2.3 2.3 0 012.5 17.2v-9z"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">Medical documentation library</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">Access a secure repository of all your medical consults, diagnoses, lab results and prescriptions, across doctors, from the comfort of your Ubuntu app.</p>
       </div>
-      <div class="rounded-2xl bg-white border border-uh-green-100 shadow-md p-8">
-        <div class="uh-arc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h12v8H9l-3 3V5z"/><path d="M16 8h4v6l-2-2h-2z" opacity="0.55"/></svg></div>
-        <h3 class="font-display text-lg font-bold text-uh-green-800 text-center mt-4 mb-3">Secure In-App Chat</h3>
-        <p class="text-sm text-uh-green-950/70 text-center leading-relaxed">End-to-end encrypted chat feature between provider and patient, ensuring that personal health information remains confidential. Share symptoms, ask questions, or follow up on treatments in real time, all within a protected, POPIA-compliant environment.</p>
+      <div class="rounded-2xl bg-[#eef3f2] border border-gray-200 p-8">
+        <div class="uh-icon-badge uh-badge-teal mx-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h12v8H9l-3 3V5z"/><path d="M16 8h4v6l-2-2h-2z" opacity="0.55"/></svg></div>
+        <h3 class="font-display text-lg font-semibold text-uh-ink-900 text-center mt-4 mb-3">Secure in-app chat</h3>
+        <p class="text-sm text-uh-ink-600 text-center leading-relaxed">End-to-end encrypted chat feature between provider and patient, ensuring that personal health information remains confidential. Share symptoms, ask questions, or follow up on treatments in real time, all within a protected, POPIA-compliant environment.</p>
       </div></div>
   </div>
 </section>
 
-<section class="relative h-72 sm:h-80">
-  <div class="absolute inset-0 bg-cover bg-center relative" style="background-image:url('https://placehold.co/1600x500/0c3b2c/ffffff?text=Doctor+working+on+a+laptop&font=poppins')" role="img" aria-label="Doctor working on a laptop"></div>
-  <div class="absolute inset-0 uh-gradient-band flex flex-col items-center justify-center text-center px-4">
-    <h2 class="font-display text-2xl sm:text-4xl font-bold text-white mb-3">Smarter Practice &ndash; Happier Patients.</h2>
-    <a href="contact.html" class="w-11 h-11 rounded-full bg-white/25 flex items-center justify-center hover:bg-white/40 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></a>
+<section class="uh-surface-teal">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
+    <h2 class="font-display text-2xl sm:text-4xl font-semibold text-white mb-6">Smarter practice, happier patients.</h2>
+    <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-uh-ink-900 rounded-full px-6 py-3 font-semibold text-sm hover:bg-gray-50 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg> Get in touch</a>
   </div>
 </section>
-</main><footer class="uh-wave-bg text-white">
+</main><footer class="uh-surface-dark text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid gap-12 md:grid-cols-3">
     <div>
-      <h3 class="font-display text-2xl tracking-[0.15em] font-light mb-4">UBUNTU HEALTH</h3>
-      <p class="text-white/80 leading-relaxed mb-6 max-w-sm">Ubuntu Health is a cloud-based, AI-driven digital health platform purpose-built to elevate patient care, optimise medical operational processes and simplify financial management, for both Hospital Groups and Medical Practices.</p>
+      <h3 class="font-display text-xl font-medium mb-4">Ubuntu Health</h3>
+      <p class="text-white/70 leading-relaxed mb-6 max-w-sm">Ubuntu Health is a cloud-based, AI-driven digital health platform purpose-built to elevate patient care, optimise medical operational processes and simplify financial management, for both Hospital Groups and Medical Practices.</p>
       <div class="flex gap-3">
           <a href="#" aria-label="facebook" class="w-9 h-9 rounded-full bg-uh-teal-600 flex items-center justify-center hover:bg-uh-teal-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.2 20v-7.3h2.4l.4-2.8h-2.8v-1.8c0-.8.2-1.3 1.4-1.3h1.5V4.2c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v2h-2.4v2.8h2.4V20h2.7z" fill="currentColor" stroke="none"/></svg></a>
           <a href="#" aria-label="x" class="w-9 h-9 rounded-full bg-uh-teal-600 flex items-center justify-center hover:bg-uh-teal-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
