@@ -43,4 +43,64 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", setActive, { passive: true });
     setActive();
   }
+
+  document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+    const track = carousel.querySelector("[data-track]");
+    const slides = Array.from(track.children);
+    const prevBtn = carousel.querySelector("[data-prev]");
+    const nextBtn = carousel.querySelector("[data-next]");
+    const dotsWrap = carousel.querySelector("[data-dots]");
+    if (!track || !slides.length) return;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "uh-carousel-dot";
+      dot.setAttribute("aria-label", `Go to feature ${i + 1}`);
+      dot.addEventListener("click", () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+    const dots = Array.from(dotsWrap.children);
+
+    const goTo = (index) => {
+      const clamped = Math.max(0, Math.min(index, slides.length - 1));
+      track.scrollTo({ left: slides[clamped].offsetLeft, behavior: "smooth" });
+    };
+
+    const current = () => {
+      let closest = 0;
+      let closestDist = Infinity;
+      slides.forEach((slide, i) => {
+        const dist = Math.abs(slide.offsetLeft - track.scrollLeft);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closest = i;
+        }
+      });
+      return closest;
+    };
+
+    const update = () => {
+      const idx = current();
+      dots.forEach((dot, i) => dot.classList.toggle("uh-active", i === idx));
+      if (prevBtn) prevBtn.disabled = idx === 0;
+      if (nextBtn) nextBtn.disabled = idx === slides.length - 1;
+    };
+
+    if (prevBtn) prevBtn.addEventListener("click", () => goTo(current() - 1));
+    if (nextBtn) nextBtn.addEventListener("click", () => goTo(current() + 1));
+
+    let scrollTimer;
+    track.addEventListener(
+      "scroll",
+      () => {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(update, 80);
+      },
+      { passive: true }
+    );
+    window.addEventListener("resize", () => goTo(current()));
+
+    update();
+  });
 });

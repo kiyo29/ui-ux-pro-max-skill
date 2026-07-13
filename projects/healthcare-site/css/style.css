@@ -132,6 +132,86 @@ h1, h2, h3, h4, .font-display {
   border-color: var(--uh-green-600);
 }
 
+/* Feature carousel (Doctor / Patient / Hospital features) */
+.uh-carousel {
+  position: relative;
+}
+.uh-carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.uh-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.uh-carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  min-width: 0;
+}
+.uh-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid #dde6e1;
+  color: var(--uh-ink-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px -8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.15s ease, transform 0.15s ease;
+  z-index: 10;
+}
+.uh-carousel-btn:hover {
+  background: var(--uh-mist-50);
+}
+.uh-carousel-btn:disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+.uh-carousel-prev {
+  left: -0.25rem;
+}
+.uh-carousel-next {
+  right: -0.25rem;
+}
+@media (min-width: 1024px) {
+  .uh-carousel-prev {
+    left: -3.5rem;
+  }
+  .uh-carousel-next {
+    right: -3.5rem;
+  }
+}
+.uh-carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+.uh-carousel-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #d7e0dc;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.15s ease, width 0.15s ease;
+}
+.uh-carousel-dot.uh-active {
+  background: var(--uh-green-600);
+  width: 1.5rem;
+}
+
 /* Placeholder photo blocks (swap for real photography/brand assets) */
 .uh-placeholder-photo {
   display: flex;
