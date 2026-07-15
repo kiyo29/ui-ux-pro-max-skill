@@ -225,3 +225,162 @@ h1, h2, h3, h4, .font-display {
   background-size: cover;
   background-position: center;
 }
+
+/* Pricing page — segmented pill toggles (audience + billing period) */
+.uh-pill-toggle {
+  display: inline-flex;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background: var(--uh-mist-100);
+  gap: 0.25rem;
+}
+.uh-pill-toggle button {
+  border: none;
+  background: transparent;
+  color: var(--uh-ink-600);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.uh-pill-toggle button.uh-active {
+  background: var(--uh-green-900);
+  color: white;
+}
+.uh-pill-toggle.uh-pill-toggle-sm button {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8125rem;
+}
+
+/* Pricing plan cards */
+.uh-plan-card {
+  background: white;
+  border: 1px solid #e2e8e5;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.uh-plan-card.uh-plan-popular {
+  border: 2px solid var(--uh-green-600);
+}
+.uh-plan-popular-badge {
+  position: absolute;
+  top: -0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--uh-green-600);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.uh-save-badge {
+  background: var(--uh-mist-50);
+  color: var(--uh-green-700);
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* Billing period visibility — toggled via a class on #pricing-root by main.js */
+.uh-monthly-price { display: none; }
+#pricing-root.uh-billing-monthly .uh-yearly-price { display: none; }
+#pricing-root.uh-billing-monthly .uh-monthly-price { display: block; }
+#pricing-root.uh-billing-monthly .uh-save-badge { display: none; }
+
+/* Audience panels (Practices / Hospital Groups) — toggled via data-audience-panel */
+[data-audience-panel] { display: none; }
+[data-audience-panel].uh-active { display: block; }
+
+/* Compare-plans table */
+.uh-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.uh-compare-table th {
+  text-align: center;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  color: var(--uh-ink-900);
+}
+.uh-compare-table th:first-child {
+  text-align: left;
+}
+.uh-compare-table td {
+  text-align: center;
+  padding: 0.85rem 1rem;
+  border-top: 1px solid #ecf1ef;
+  color: var(--uh-ink-600);
+}
+.uh-compare-table td:first-child {
+  text-align: left;
+  color: var(--uh-ink-900);
+  font-weight: 500;
+}
+.uh-compare-table tr.uh-compare-group td {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--uh-ink-900);
+  border-top: none;
+}
+.uh-compare-table td.uh-compare-yes {
+  color: var(--uh-green-600);
+}
+.uh-compare-table td.uh-compare-dash {
+  color: #c7d2ce;
+}
+
+/* FAQ accordion */
+.uh-faq-item {
+  border-bottom: 1px solid #e5ecea;
+}
+.uh-faq-item:first-child {
+  border-top: 1px solid #e5ecea;
+}
+.uh-faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--uh-ink-900);
+  cursor: pointer;
+}
+.uh-faq-icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+.uh-faq-item.uh-open .uh-faq-icon {
+  transform: rotate(45deg);
+}
+.uh-faq-a {
+  display: none;
+  padding: 0 0 1.5rem;
+  color: var(--uh-ink-600);
+  line-height: 1.7;
+}
+.uh-faq-item.uh-open .uh-faq-a {
+  display: block;
+}

@@ -103,4 +103,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
     update();
   });
+
+  // Pricing: audience toggle (Practices / Hospital Groups)
+  const audienceButtons = document.querySelectorAll("[data-audience-btn]");
+  if (audienceButtons.length) {
+    const panels = document.querySelectorAll("[data-audience-panel]");
+    const setAudience = (audience) => {
+      audienceButtons.forEach((btn) => {
+        btn.classList.toggle("uh-active", btn.dataset.audienceBtn === audience);
+      });
+      panels.forEach((panel) => {
+        panel.classList.toggle("uh-active", panel.dataset.audiencePanel === audience);
+      });
+    };
+    audienceButtons.forEach((btn) => {
+      btn.addEventListener("click", () => setAudience(btn.dataset.audienceBtn));
+    });
+    setAudience(audienceButtons[0].dataset.audienceBtn);
+  }
+
+  // Pricing: billing toggle (Yearly / Monthly)
+  const billingButtons = document.querySelectorAll("[data-billing-btn]");
+  const pricingRoot = document.getElementById("pricing-root");
+  if (billingButtons.length && pricingRoot) {
+    const setBilling = (billing) => {
+      billingButtons.forEach((btn) => {
+        btn.classList.toggle("uh-active", btn.dataset.billingBtn === billing);
+      });
+      pricingRoot.classList.toggle("uh-billing-monthly", billing === "monthly");
+    };
+    billingButtons.forEach((btn) => {
+      btn.addEventListener("click", () => setBilling(btn.dataset.billingBtn));
+    });
+    setBilling("yearly");
+  }
+
+  // FAQ accordion
+  document.querySelectorAll("[data-faq-item]").forEach((item, i) => {
+    const q = item.querySelector("[data-faq-q]");
+    if (!q) return;
+    if (i === 0) item.classList.add("uh-open");
+    q.addEventListener("click", () => {
+      item.classList.toggle("uh-open");
+    });
+  });
 });

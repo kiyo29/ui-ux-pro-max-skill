@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing | Ubuntu Health</title>
+<meta name="description" content="Ubuntu Health pricing &mdash; plans for individual practices and hospital groups, from a free tier to enterprise.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tailwind.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-uh-ink-900 antialiased">
+<header class="bg-white sticky top-0 z-50 border-b border-gray-100">
+  <div class="uh-topbar h-1 w-full"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center shrink-0">
+        <img src="assets/logo.png" alt="Ubuntu Health" class="h-5 w-auto">
+      </a>
+
+      <div class="hidden lg:flex flex-1 justify-center">
+        <nav class="flex items-center gap-1">
+          <a href="index.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Home</a>
+        <a href="features.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Features</a>
+        <a href="compliance.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Compliance</a>
+        <a href="pricing.html" class="px-3 py-2 text-[15px] transition-colors text-uh-green-700 font-semibold">Pricing</a>
+        <a href="why-us.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Why Us</a>
+        <a href="contact.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Contact Us</a>
+        </nav>
+      </div>
+
+      <div class="hidden sm:flex items-center gap-2">
+        <button type="button" class="rounded-full bg-uh-green-600 hover:bg-uh-green-700 text-white text-sm font-semibold px-5 py-2.5 transition-colors">Login</button>
+      </div>
+
+      <button id="uh-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-50 text-uh-ink-900" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <div id="uh-mobile-menu" class="hidden lg:hidden mt-3 flex flex-col gap-1 pb-2 border-t border-gray-100 pt-3">
+      <a href="index.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Home</a>
+        <a href="features.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Features</a>
+        <a href="compliance.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Compliance</a>
+        <a href="pricing.html" class="px-3 py-2 text-[15px] transition-colors text-uh-green-700 font-semibold block">Pricing</a>
+        <a href="why-us.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Why Us</a>
+        <a href="contact.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Contact Us</a>
+      <button type="button" class="sm:hidden mt-2 inline-flex justify-center rounded-full bg-uh-green-600 text-white text-sm font-semibold px-5 py-2.5 w-fit">Login</button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="uh-surface-mist">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center">
+    <h1 class="font-display text-4xl sm:text-5xl font-semibold text-uh-ink-900 mb-8">There&rsquo;s an Ubuntu Health plan that&rsquo;s right for <span class="text-uh-teal-600 italic">you</span></h1>
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      
+    <div class="uh-pill-toggle" role="tablist" aria-label="Choose your audience">
+      <button type="button" data-audience-btn="practices" class="uh-active">For Practices</button>
+      <button type="button" data-audience-btn="hospitals">For Hospital Groups</button>
+    </div>
+      
+    <div class="uh-pill-toggle uh-pill-toggle-sm" role="tablist" aria-label="Choose billing period">
+      <button type="button" data-billing-btn="yearly" class="uh-active">Yearly</button>
+      <button type="button" data-billing-btn="monthly">Monthly</button>
+    </div>
+    </div>
+  </div>
+</section>
+<div id="pricing-root">
+<section class="bg-white py-16 sm:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+      <div data-audience-panel="practices" class="uh-active">
+        <div class="grid md:grid-cols-3 gap-6 sm:gap-8 items-stretch mb-20 sm:mb-24">
+          
+      <div class="uh-plan-card ">
+        
+        <h3 class="font-display text-2xl font-semibold text-uh-ink-900 mb-2">Starter</h3>
+        <p class="text-sm text-uh-ink-600 mb-6 min-h-[2.5rem]">Start with the basics. Stay focused on the patient.</p>
+        <div class="mb-2">
+          <p class="uh-yearly-price"><span class="font-display text-4xl font-semibold text-uh-ink-900">R0</span><span class="text-uh-ink-600 text-sm"> /user/month</span></p>
+          <p class="uh-monthly-price"><span class="font-display text-4xl font-semibold text-uh-ink-900">R0</span><span class="text-uh-ink-600 text-sm"> /user/month</span></p>
+          <p class="text-xs text-uh-ink-600/70 mt-1">Excludes applicable taxes.</p>
+          <div class="mt-3 h-6"></div>
+        </div>
+        <div class="mt-6 mb-6">
+          <a href="contact.html" class="block text-center w-full rounded-full bg-[#eef3f2] hover:bg-[#e3ebe8] text-uh-ink-900 font-semibold text-sm px-5 py-3 transition-colors">Get Ubuntu free</a>
+          <div class="mt-3 h-5"></div>
+        </div>
+        <div class="border-t border-gray-100 pt-6 mt-auto">
+          <p class="text-sm font-semibold text-uh-ink-900 mb-4">Free for everyone</p>
+          <ul class="space-y-3"><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Digital bookings via web, mobile or WhatsApp</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Directory of medical professionals &amp; facilities</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Medication tracker &amp; live health news</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Global healthcare-grade security</span></li></ul>
+        </div>
+      </div>
+      <div class="uh-plan-card uh-plan-popular">
+        <span class="uh-plan-popular-badge">Most popular</span>
+        <h3 class="font-display text-2xl font-semibold text-uh-ink-900 mb-2">Professional</h3>
+        <p class="text-sm text-uh-ink-600 mb-6 min-h-[2.5rem]">Document clearly. Consult with confidence. Leave on time.</p>
+        <div class="mb-2">
+          <p class="uh-yearly-price"><span class="font-display text-4xl font-semibold text-uh-ink-900">R699</span><span class="text-uh-ink-600 text-sm"> /user/month</span></p>
+          <p class="uh-monthly-price"><span class="font-display text-4xl font-semibold text-uh-ink-900">R899</span><span class="text-uh-ink-600 text-sm"> /user/month</span></p>
+          <p class="text-xs text-uh-ink-600/70 mt-1">Excludes applicable taxes.</p>
+          <div class="mt-3"><span class="uh-save-badge">Save R2,400/yr</span></div>
+        </div>
+        <div class="mt-6 mb-6">
+          <a href="contact.html" class="block text-center w-full rounded-full bg-uh-green-600 hover:bg-uh-green-700 text-white font-semibold text-sm px-5 py-3 transition-colors">Try 14 days free</a>
+          <a href="contact.html" class="block text-center text-sm font-semibold text-uh-ink-900 mt-3 hover:text-uh-green-700">Talk to us</a>
+        </div>
+        <div class="border-t border-gray-100 pt-6 mt-auto">
+          <p class="text-sm font-semibold text-uh-ink-900 mb-4">Everything in Starter, plus:</p>
+          <ul class="space-y-3"><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>AI medical transcription</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Teleconsults linked to billing &amp; e-prescriptions</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Medical aid claim submissions</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Secure in-app chat</span></li></ul>
+        </div>
+      </div>
+      <div class="uh-plan-card ">
+        
+        <h3 class="font-display text-2xl font-semibold text-uh-ink-900 mb-2">Enterprise</h3>
+        <p class="text-sm text-uh-ink-600 mb-6 min-h-[2.5rem]">Consistency across documentation and clinical standards.</p>
+        <div class="mb-2"><p class="font-display text-3xl font-semibold text-uh-ink-900 mt-2">Custom</p><p class="text-xs text-uh-ink-600/70 mt-1">Tailored to your organisation.</p></div>
+        <div class="mt-6 mb-6">
+          <a href="contact.html" class="block text-center w-full rounded-full bg-uh-green-900 hover:bg-uh-green-950 text-white font-semibold text-sm px-5 py-3 transition-colors">Talk to us</a>
+          <div class="mt-3 h-5"></div>
+        </div>
+        <div class="border-t border-gray-100 pt-6 mt-auto">
+          <p class="text-sm font-semibold text-uh-ink-900 mb-4">Everything in Professional, plus:</p>
+          <ul class="space-y-3"><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Multi-branch practice management</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Custom integrations &amp; data migration</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Dedicated account manager</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Priority SLA-backed support</span></li></ul>
+        </div>
+      </div>
+        </div>
+        <div class="max-w-5xl mx-auto">
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-8">Compare our plans</h2>
+          
+    <div class="overflow-x-auto">
+      <table class="uh-compare-table min-w-[640px]">
+        <thead><tr><th></th><th>Starter</th><th>Professional</th><th>Enterprise</th></tr></thead>
+        <tbody><tr class="uh-compare-group"><td colspan="4">Booking &amp; Care</td></tr><tr><td>Digital bookings (web / mobile / WhatsApp)</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Medical professional directory</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Medication tracker &amp; live health news</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr class="uh-compare-group"><td colspan="4">Clinical Documentation</td></tr><tr><td>AI medical transcription</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Teleconsults &amp; e-Prescriptions</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Medical aid claim submissions</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr class="uh-compare-group"><td colspan="4">Compliance &amp; Support</td></tr><tr><td>Global healthcare-grade security</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Secure in-app chat</td><td class="text-xs text-uh-ink-600/70">Limited</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Dedicated account manager</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Priority SLA-backed support</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr></tbody>
+      </table>
+    </div>
+        </div>
+      </div>
+    
+      <div data-audience-panel="hospitals" class="">
+        <div class="grid md:grid-cols-3 gap-6 sm:gap-8 items-stretch mb-20 sm:mb-24">
+          
+      <div class="uh-plan-card ">
+        
+        <h3 class="font-display text-2xl font-semibold text-uh-ink-900 mb-2">Department</h3>
+        <p class="text-sm text-uh-ink-600 mb-6 min-h-[2.5rem]">For a single department getting started.</p>
+        <div class="mb-2">
+          <p class="uh-yearly-price"><span class="font-display text-4xl font-semibold text-uh-ink-900">R0</span><span class="text-uh-ink-600 text-sm"> /user/month</span></p>
+          <p class="uh-monthly-price"><span class="font-display text-4xl font-semibold text-uh-ink-900">R0</span><span class="text-uh-ink-600 text-sm"> /user/month</span></p>
+          <p class="text-xs text-uh-ink-600/70 mt-1">Excludes applicable taxes.</p>
+          <div class="mt-3 h-6"></div>
+        </div>
+        <div class="mt-6 mb-6">
+          <a href="contact.html" class="block text-center w-full rounded-full bg-[#eef3f2] hover:bg-[#e3ebe8] text-uh-ink-900 font-semibold text-sm px-5 py-3 transition-colors">Get Ubuntu free</a>
+          <div class="mt-3 h-5"></div>
+        </div>
+        <div class="border-t border-gray-100 pt-6 mt-auto">
+          <p class="text-sm font-semibold text-uh-ink-900 mb-4">Free for everyone</p>
+          <ul class="space-y-3"><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Patient management &amp; engagement</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Electronic patient medical records</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Document upload &amp; retrieval</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Global healthcare-grade security</span></li></ul>
+        </div>
+      </div>
+      <div class="uh-plan-card uh-plan-popular">
+        <span class="uh-plan-popular-badge">Most popular</span>
+        <h3 class="font-display text-2xl font-semibold text-uh-ink-900 mb-2">Hospital</h3>
+        <p class="text-sm text-uh-ink-600 mb-6 min-h-[2.5rem]">Unify processes and enhance financial performance.</p>
+        <div class="mb-2">
+          <p class="uh-yearly-price"><span class="font-display text-4xl font-semibold text-uh-ink-900">R1,050</span><span class="text-uh-ink-600 text-sm"> /user/month</span></p>
+          <p class="uh-monthly-price"><span class="font-display text-4xl font-semibold text-uh-ink-900">R1,250</span><span class="text-uh-ink-600 text-sm"> /user/month</span></p>
+          <p class="text-xs text-uh-ink-600/70 mt-1">Excludes applicable taxes.</p>
+          <div class="mt-3"><span class="uh-save-badge">Save R2,400/yr</span></div>
+        </div>
+        <div class="mt-6 mb-6">
+          <a href="contact.html" class="block text-center w-full rounded-full bg-uh-green-600 hover:bg-uh-green-700 text-white font-semibold text-sm px-5 py-3 transition-colors">Try 14 days free</a>
+          <a href="contact.html" class="block text-center text-sm font-semibold text-uh-ink-900 mt-3 hover:text-uh-green-700">Talk to us</a>
+        </div>
+        <div class="border-t border-gray-100 pt-6 mt-auto">
+          <p class="text-sm font-semibold text-uh-ink-900 mb-4">Everything in Department, plus:</p>
+          <ul class="space-y-3"><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>In-patient management &amp; bed allocation</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Supply chain &amp; inventory forecasting</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Healthcare Heartbeat real-time view</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Reporting &amp; analytics</span></li></ul>
+        </div>
+      </div>
+      <div class="uh-plan-card ">
+        
+        <h3 class="font-display text-2xl font-semibold text-uh-ink-900 mb-2">Enterprise</h3>
+        <p class="text-sm text-uh-ink-600 mb-6 min-h-[2.5rem]">Consistency across every facility you operate.</p>
+        <div class="mb-2"><p class="font-display text-3xl font-semibold text-uh-ink-900 mt-2">Custom</p><p class="text-xs text-uh-ink-600/70 mt-1">Tailored to your organisation.</p></div>
+        <div class="mt-6 mb-6">
+          <a href="contact.html" class="block text-center w-full rounded-full bg-uh-green-900 hover:bg-uh-green-950 text-white font-semibold text-sm px-5 py-3 transition-colors">Talk to us</a>
+          <div class="mt-3 h-5"></div>
+        </div>
+        <div class="border-t border-gray-100 pt-6 mt-auto">
+          <p class="text-sm font-semibold text-uh-ink-900 mb-4">Everything in Hospital, plus:</p>
+          <ul class="space-y-3"><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Multi-facility rollup reporting</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Custom AI model tuning</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Dedicated account manager</span></li><li class="flex items-start gap-2 text-sm text-uh-ink-600"><span class="text-uh-green-600 mt-0.5 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span><span>Priority SLA-backed support</span></li></ul>
+        </div>
+      </div>
+        </div>
+        <div class="max-w-5xl mx-auto">
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold text-uh-ink-900 mb-8">Compare our plans</h2>
+          
+    <div class="overflow-x-auto">
+      <table class="uh-compare-table min-w-[640px]">
+        <thead><tr><th></th><th>Department</th><th>Hospital</th><th>Enterprise</th></tr></thead>
+        <tbody><tr class="uh-compare-group"><td colspan="4">Patient &amp; Facility</td></tr><tr><td>Patient management &amp; engagement</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Electronic patient medical records</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>In-patient management &amp; bed allocation</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr class="uh-compare-group"><td colspan="4">Operations</td></tr><tr><td>Supply chain &amp; inventory forecasting</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Healthcare Heartbeat real-time view</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Reporting &amp; analytics</td><td class="text-xs text-uh-ink-600/70">Limited</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr class="uh-compare-group"><td colspan="4">Compliance &amp; Support</td></tr><tr><td>Global healthcare-grade security</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Dedicated account manager</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr><tr><td>Priority SLA-backed support</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-dash">&mdash;</td><td class="uh-compare-yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></td></tr></tbody>
+      </table>
+    </div>
+        </div>
+      </div>
+  </div>
+</section>
+</div>
+<section class="uh-surface-mist py-16 sm:py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-uh-ink-900 mb-4">Questions &amp; answers</h2>
+      <p class="text-uh-ink-600 mb-8">Everything you need to know about Ubuntu Health.</p>
+      <a href="contact.html" class="inline-flex items-center gap-2 bg-uh-green-600 hover:bg-uh-green-700 text-white rounded-full px-6 py-3 font-semibold text-sm w-fit transition-colors">Speak to our team <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div>
+      
+      <div class="uh-faq-item" data-faq-item>
+        <button type="button" class="uh-faq-q" data-faq-q>Can I cancel my Ubuntu Health subscription at any time?<span class="uh-faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="uh-faq-a">Yes, you can cancel your subscription at any time. If you cancel, you&rsquo;ll retain access to your current plan&rsquo;s features until the end of the billing cycle, and annual plans are not charged again the following year. For help, reach out to our <a href="contact.html" class="text-uh-teal-600 underline">support team</a>.</div>
+      </div>
+      <div class="uh-faq-item" data-faq-item>
+        <button type="button" class="uh-faq-q" data-faq-q>Is Ubuntu Health worth it for a solo practice?<span class="uh-faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="uh-faq-a">Most solo practitioners start on the free Starter plan and upgrade once they need AI transcription, teleconsults or medical aid claim submissions &mdash; there&rsquo;s no obligation to upgrade until those features are needed.</div>
+      </div>
+      <div class="uh-faq-item" data-faq-item>
+        <button type="button" class="uh-faq-q" data-faq-q>When should I upgrade to the Hospital plan?<span class="uh-faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="uh-faq-a">If you&rsquo;re coordinating in-patient care, supply chain or multi-department reporting across a facility, the Hospital plan&rsquo;s operational tooling typically pays for itself quickly.</div>
+      </div>
+      <div class="uh-faq-item" data-faq-item>
+        <button type="button" class="uh-faq-q" data-faq-q>Why is there a free version of Ubuntu Health forever?<span class="uh-faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="uh-faq-a">We believe every clinician in Africa should have access to core digital tools regardless of budget. The free plan is permanent, not a trial.</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main><footer class="uh-surface-brand text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid gap-12 md:grid-cols-3">
+    <div>
+      <img src="assets/logo-white.png" alt="Ubuntu Health" class="h-7 w-auto mb-4">
+      <p class="text-white/70 leading-relaxed mb-6 max-w-sm">Ubuntu Health is a cloud-based, AI-driven digital health platform purpose-built to elevate patient care, optimise medical operational processes and simplify financial management, for both Hospital Groups and Medical Practices.</p>
+      <div class="flex gap-3">
+          <a href="#" aria-label="facebook" class="w-9 h-9 rounded-full bg-uh-teal-600 flex items-center justify-center hover:bg-uh-teal-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.2 20v-7.3h2.4l.4-2.8h-2.8v-1.8c0-.8.2-1.3 1.4-1.3h1.5V4.2c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v2h-2.4v2.8h2.4V20h2.7z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="x" class="w-9 h-9 rounded-full bg-uh-teal-600 flex items-center justify-center hover:bg-uh-teal-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+          <a href="#" aria-label="linkedin" class="w-9 h-9 rounded-full bg-uh-teal-600 flex items-center justify-center hover:bg-uh-teal-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 10.5V16M8 7.8v.02"/><path d="M11.3 16v-3.3c0-1.2.8-2.2 2-2.2s2 1 2 2.2V16" /><path d="M11.3 12v4"/></svg></a>
+          <a href="#" aria-label="instagram" class="w-9 h-9 rounded-full bg-uh-teal-600 flex items-center justify-center hover:bg-uh-teal-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.3"/><circle cx="16.2" cy="7.8" r=".7" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-display text-lg font-semibold mb-4">Our Other Solutions
+        <span class="block w-10 h-0.5 bg-uh-teal-500 mt-2"></span>
+      </h4>
+      <ul class="space-y-3 text-white/85">
+        <li class="flex items-center gap-2"><span class="text-uh-teal-500">&#8250;</span> Education</li>
+        <li class="flex items-center gap-2"><span class="text-uh-teal-500">&#8250;</span> Organisational Management</li>
+        <li class="flex items-center gap-2"><span class="text-uh-teal-500">&#8250;</span> Supply Chain Management (SCM)</li>
+        <li class="flex items-center gap-2"><span class="text-uh-teal-500">&#8250;</span> Public Sector</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display text-lg font-semibold mb-4">Contact Us
+        <span class="block w-10 h-0.5 bg-uh-teal-500 mt-2"></span>
+      </h4>
+      <ul class="space-y-4 text-white/85">
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mt-1 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8.2 3.5h-2A2.7 2.7 0 003.5 6.2c0 8 6.3 14.3 14.3 14.3a2.7 2.7 0 002.7-2.7v-2l-4.4-1.5-1.5 1.9a11 11 0 01-5.7-5.7l1.9-1.5L9.3 3.5H8.2z"/></svg> <span>+27 31 301 0340</span></li>
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mt-1 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg> <a href="mailto:info@ubuntuhealth.co.za" class="hover:text-white">info@ubuntuhealth.co.za</a></li>
+        <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mt-1 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg> <span>Unit 5, 4 Derby Place, Derby Downs Office Park, Westville, KwaZulu-Natal &ndash; 3629</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-4 text-center text-xs text-white/60">&copy; 2026 Ubuntu Health &middot; A GP infoTech company. All rights reserved.</div>
+</footer>
+<button id="uh-back-to-top" class="uh-back-to-top" aria-label="Back to top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<a href="contact.html" class="uh-fab" aria-label="Contact us"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></a>
+<script src="js/main.js"></script>
+</body>
+</html>
