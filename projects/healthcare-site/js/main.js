@@ -23,6 +23,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const fab = document.querySelector(".uh-fab");
+  if (fab) {
+    const darkSections = Array.from(
+      document.querySelectorAll(".uh-surface-brand, .uh-surface-teal, .uh-surface-dark")
+    );
+    const updateFabTheme = () => {
+      const probeY = fab.getBoundingClientRect().top + fab.offsetHeight / 2;
+      const onDark = darkSections.some((section) => {
+        const rect = section.getBoundingClientRect();
+        return probeY >= rect.top && probeY <= rect.bottom;
+      });
+      fab.classList.toggle("uh-fab-on-dark", onDark);
+    };
+    window.addEventListener("scroll", updateFabTheme, { passive: true });
+    window.addEventListener("resize", updateFabTheme);
+    updateFabTheme();
+  }
+
   const complianceLinks = document.querySelectorAll(".uh-compliance-nav a");
   if (complianceLinks.length) {
     const sections = Array.from(complianceLinks)
