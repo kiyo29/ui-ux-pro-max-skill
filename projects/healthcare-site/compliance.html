@@ -23,7 +23,15 @@
       <div class="hidden lg:flex flex-1 justify-center">
         <nav class="flex items-center gap-1">
           <a href="index.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Home</a>
-        <a href="features.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Features</a>
+        <div class="relative group">
+        <a href="features.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium inline-flex items-center gap-1">Features<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="absolute left-0 top-full pt-2 hidden group-hover:block z-50">
+          <div class="bg-white border border-gray-200 rounded-xl shadow-lg py-2 min-w-[170px]">
+            <a href="features.html" class="block px-4 py-2.5 text-sm text-uh-ink-900 hover:bg-[#eef3f2] hover:text-uh-green-700 transition-colors">Doctors</a>
+            <a href="patients.html" class="block px-4 py-2.5 text-sm text-uh-ink-900 hover:bg-[#eef3f2] hover:text-uh-green-700 transition-colors">Patients</a>
+          </div>
+        </div>
+      </div>
         <a href="compliance.html" class="px-3 py-2 text-[15px] transition-colors text-uh-green-700 font-semibold">Compliance</a>
         <a href="pricing.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Pricing</a>
         <a href="why-us.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium">Why Us</a>
@@ -43,7 +51,13 @@
 
     <div id="uh-mobile-menu" class="hidden lg:hidden mt-3 flex flex-col gap-1 pb-2 border-t border-gray-100 pt-3">
       <a href="index.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Home</a>
+        <div>
         <a href="features.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Features</a>
+        <div class="pl-4 flex flex-col gap-1 mt-1">
+          <a href="features.html" class="block py-1.5 text-sm text-uh-ink-900/70 hover:text-uh-green-700">Doctors</a>
+          <a href="patients.html" class="block py-1.5 text-sm text-uh-ink-900/70 hover:text-uh-green-700">Patients</a>
+        </div>
+      </div>
         <a href="compliance.html" class="px-3 py-2 text-[15px] transition-colors text-uh-green-700 font-semibold block">Compliance</a>
         <a href="pricing.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Pricing</a>
         <a href="why-us.html" class="px-3 py-2 text-[15px] transition-colors text-uh-ink-900/80 hover:text-uh-green-700 font-medium block">Why Us</a>
