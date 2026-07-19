@@ -288,6 +288,11 @@
   .service-note{margin-top:26px;font-size:.8rem;color:var(--muted);font-style:italic}
 
   /* ---------- About / Craft ---------- */
+  #craft{
+    min-height:100vh;min-height:100svh;
+    display:flex;align-items:center;
+  }
+  #craft .wrap{width:100%}
   .craft{
     display:grid;grid-template-columns:1fr;gap:56px;align-items:center;
   }
@@ -302,6 +307,12 @@
   .stat-cell:nth-last-child(-n+2){border-bottom:none}
   .stat-num{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--gold-light);font-weight:700}
   .stat-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:8px;font-weight:600}
+  @media(max-width:640px){
+    #craft{padding-top:48px;padding-bottom:48px}
+    .craft{gap:32px}
+    .craft-copy p{font-size:.92rem;margin-bottom:12px}
+    .stat-cell{padding:22px 18px}
+  }
 
 
   /* ---------- Testimonials ---------- */
