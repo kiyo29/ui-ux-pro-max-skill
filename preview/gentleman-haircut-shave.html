@@ -374,6 +374,26 @@
   .mobile-bar .btn,.mobile-bar .whatsapp-book-btn{flex:1;padding:14px 10px;font-size:.72rem;justify-content:center}
   @media(min-width:860px){ .mobile-bar{display:none} }
 
+  /* ---------- Back to top ---------- */
+  .back-to-top{
+    position:fixed;right:24px;bottom:24px;z-index:80;
+    width:48px;height:48px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--charcoal);border:1px solid var(--line-strong);
+    opacity:0;visibility:hidden;transform:translateY(12px);
+    transition:opacity .3s var(--ease),transform .3s var(--ease),visibility 0s linear .3s,border-color .25s,background .25s;
+  }
+  .back-to-top svg{width:18px;height:18px;stroke:var(--gold-light)}
+  .back-to-top.is-visible{
+    opacity:1;visibility:visible;transform:translateY(0);
+    transition:opacity .3s var(--ease),transform .3s var(--ease),border-color .25s,background .25s;
+  }
+  .back-to-top:hover{border-color:var(--gold);background:var(--charcoal-2)}
+  .back-to-top.is-visible:hover{transform:translateY(-3px)}
+  @media(max-width:859px){
+    .back-to-top{bottom:calc(84px + env(safe-area-inset-bottom));right:16px}
+  }
+
   /* ---------- WhatsApp booking button ---------- */
   .whatsapp-book-btn{
     display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
@@ -837,11 +857,18 @@
   </a>
 </div>
 
+<!-- ============ BACK TO TOP ============ -->
+<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</a>
+
 <script>
   // Sticky header state
   var header = document.getElementById('siteHeader');
+  var backToTop = document.getElementById('backToTop');
   var onScroll = function(){
     header.classList.toggle('is-scrolled', window.scrollY > 40);
+    backToTop.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.6);
   };
   document.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
