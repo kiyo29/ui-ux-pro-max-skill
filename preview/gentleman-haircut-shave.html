@@ -396,12 +396,13 @@
   /* ---------- WhatsApp booking button ---------- */
   .whatsapp-book-btn{
     display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
-    background-color:#25D366;color:#ffffff;
+    background:var(--gold-grad);color:#141008;
     font-family:inherit;font-weight:600;font-size:15px;
     padding:12px 20px;border-radius:8px;text-decoration:none;
-    transition:background-color 0.2s ease, transform 0.1s ease;
+    box-shadow:0 8px 24px -8px rgba(201,162,75,.55);
+    transition:box-shadow 0.2s ease, transform 0.1s ease;
   }
-  .whatsapp-book-btn:hover{background-color:#1ebe5b}
+  .whatsapp-book-btn:hover{box-shadow:0 14px 32px -8px rgba(201,162,75,.7);transform:translateY(-2px)}
   .whatsapp-book-btn:active{transform:scale(0.97)}
   .whatsapp-book-btn svg{flex-shrink:0}
   .header-actions .whatsapp-book-btn{flex-shrink:0}
