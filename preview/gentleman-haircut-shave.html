@@ -259,22 +259,6 @@
   .scroll-cue svg{width:12px;height:18px;stroke:var(--gold);animation:bob 2.2s ease-in-out infinite}
   @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 
-  /* ---------- Marquee ---------- */
-  .marquee-strip{
-    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    background:var(--charcoal);overflow:hidden;position:relative;
-  }
-  .marquee-track{
-    display:flex;width:max-content;gap:0;animation:scroll-x 32s linear infinite;
-  }
-  .marquee-track span{
-    display:inline-flex;align-items:center;gap:14px;padding:16px 0;
-    font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--ivory-dim);
-    white-space:nowrap;padding-right:14px;
-  }
-  .marquee-track span::after{content:"✦";color:var(--gold);margin-left:14px}
-  @keyframes scroll-x{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
   /* ---------- Services ---------- */
   .service-list{border-top:1px solid var(--line)}
   .service-row{
@@ -539,14 +523,6 @@
       <svg viewBox="0 0 12 20" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v17M1 13l5 5 5-5"/></svg>
     </div>
   </section>
-
-  <!-- ============ MARQUEE ============ -->
-  <div class="marquee-strip" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Master Barbers</span><span>Hot Towel Shaves</span><span>Precision Fades</span><span>Beard Sculpting</span><span>Premium Grooming</span><span>Walk-ins Welcome</span>
-      <span>Master Barbers</span><span>Hot Towel Shaves</span><span>Precision Fades</span><span>Beard Sculpting</span><span>Premium Grooming</span><span>Walk-ins Welcome</span>
-    </div>
-  </div>
 
   <!-- ============ SERVICES ============ -->
   <section class="section" id="services">
