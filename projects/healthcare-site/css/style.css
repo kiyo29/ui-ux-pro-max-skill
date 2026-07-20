@@ -238,6 +238,9 @@ h1, h2, h3, h4, .font-display {
   background: var(--uh-mist-100);
   gap: 0.25rem;
 }
+.uh-pill-toggle.uh-force-hidden {
+  display: none;
+}
 .uh-pill-toggle button {
   border: none;
   background: transparent;

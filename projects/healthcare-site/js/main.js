@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const audienceButtons = document.querySelectorAll("[data-audience-btn]");
   if (audienceButtons.length) {
     const panels = document.querySelectorAll("[data-audience-panel]");
+    const billingToggleWrap = document.getElementById("billing-toggle");
     const setAudience = (audience) => {
       audienceButtons.forEach((btn) => {
         btn.classList.toggle("uh-active", btn.dataset.audienceBtn === audience);
@@ -133,6 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
       panels.forEach((panel) => {
         panel.classList.toggle("uh-active", panel.dataset.audiencePanel === audience);
       });
+      if (billingToggleWrap) {
+        billingToggleWrap.classList.toggle("uh-force-hidden", audience === "hospitals");
+      }
     };
     audienceButtons.forEach((btn) => {
       btn.addEventListener("click", () => setAudience(btn.dataset.audienceBtn));
